@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "bg-office",
+  "source": {
+    "pack": "POLYGON_City",
+    "asset": "SM_Bld_OfficeSquare_01",
+    "assetId": 100
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -10.5,
+      0,
+      -10.5
+    ],
+    "max": [
+      10.5,
+      42,
+      10.5
+    ],
+    "size": [
+      21,
+      42,
+      21
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        21,
+        0
+      ],
+      "size": [
+        21,
+        42,
+        21
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.4,
+    "fit": {
+      "height": 42
+    }
+  },
+  "compress": "meshopt"
+}

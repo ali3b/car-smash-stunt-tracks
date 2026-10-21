@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "name": "sky-tropical",
+  "source": {
+    "kind": "skydome",
+    "preset": "tropical",
+    "ring": [
+      {
+        "ref": "POLYGON_NatureBiomes_TropicalJungle/SM_Env_Volcano_01",
+        "pack": "POLYGON_NatureBiomes_TropicalJungle",
+        "asset": "SM_Env_Volcano_01",
+        "assetId": 14842
+      },
+      {
+        "ref": "POLYGON_NatureBiomes_MeadowForest/SM_Env_Background_Hill_01",
+        "pack": "POLYGON_NatureBiomes_MeadowForest",
+        "asset": "SM_Env_Background_Hill_01",
+        "assetId": 15221
+      },
+      {
+        "ref": "POLYGON_NatureBiomes_SwampMarshland/SM_Env_Background_Hill_01",
+        "pack": "POLYGON_NatureBiomes_SwampMarshland",
+        "asset": "SM_Env_Background_Hill_01",
+        "assetId": 15065
+      }
+    ]
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "centre",
+  "bounds": {
+    "min": [
+      -9000,
+      -9000,
+      -9000
+    ],
+    "max": [
+      9000,
+      9000,
+      9000
+    ],
+    "size": [
+      18000,
+      18000,
+      18000
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        18000,
+        18000,
+        18000
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "skydome": {
+    "radius": 9000,
+    "colors": {
+      "zenith": "#1f84df",
+      "horizon": "#c4ecf7",
+      "ground": "#2a8c9c",
+      "ring": "#3f6d48"
+    },
+    "dome": "dome",
+    "ring": {
+      "node": "ring",
+      "props": 58,
+      "triangles": 17042
+    },
+    "panorama": {
+      "file": "sky-tropical_panorama.png",
+      "width": 2048,
+      "height": 1024
+    }
+  },
+  "compress": "meshopt"
+}

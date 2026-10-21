@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "sc-diner",
+  "source": {
+    "pack": "POLYGON_Apocalypse",
+    "asset": "SM_Bld_Diner_01",
+    "assetId": 9312
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -7.1696,
+      0,
+      -11
+    ],
+    "max": [
+      7.1696,
+      6.189,
+      11
+    ],
+    "size": [
+      14.3392,
+      6.189,
+      22
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        3.0945,
+        0
+      ],
+      "size": [
+        14.3392,
+        6.189,
+        22
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.372587,
+    "fit": {
+      "length": 22
+    }
+  },
+  "compress": "meshopt"
+}

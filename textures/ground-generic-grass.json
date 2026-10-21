@@ -1,0 +1,17 @@
+{
+  "name": "Generic_Grass",
+  "source": {
+    "pack": "POLYGON_Generic",
+    "path": "POLYGON_Generic_v3/Textures/Generic_Grass.png"
+  },
+  "width": 512,
+  "height": 512,
+  "background": "opaque",
+  "frames": null,
+  "format": "png",
+  "sourceSize": [
+    2048,
+    2048
+  ],
+  "image": "ground-generic-grass.png"
+}

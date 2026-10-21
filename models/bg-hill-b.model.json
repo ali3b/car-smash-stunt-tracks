@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "bg-hill-b",
+  "source": {
+    "pack": "POLYGON_War",
+    "asset": "SM_Env_Mountains_Grass_02",
+    "assetId": 722
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -10.1042,
+      0,
+      -9.9863
+    ],
+    "max": [
+      10.1042,
+      4.9746,
+      9.9863
+    ],
+    "size": [
+      20.2084,
+      4.9746,
+      19.9726
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        2.4873,
+        0
+      ],
+      "size": [
+        20.2084,
+        4.9746,
+        19.9726
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

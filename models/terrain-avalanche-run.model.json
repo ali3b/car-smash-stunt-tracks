@@ -1,0 +1,259 @@
+{
+  "version": 1,
+  "name": "terrain-avalanche-run",
+  "source": {
+    "kind": "terrain",
+    "tile": null,
+    "materials": {
+      "ground": {
+        "ref": "#f4f8fc",
+        "color": "#f4f8fc"
+      },
+      "slope": {
+        "ref": "POLYGON_NatureBiomes_AlpineMountain/SM_Env_Rock_Cliff_01",
+        "color": "#56544f",
+        "pack": "POLYGON_NatureBiomes_AlpineMountain",
+        "asset": "SM_Env_Rock_Cliff_01",
+        "assetId": 14636,
+        "material": "PolygonNatureBiomesS2_Alpine_Texture_01.png",
+        "texture": "PolygonNatureBiomesS2_Alpine_Texture_01",
+        "uv": [
+          0.2716,
+          0.8731
+        ]
+      },
+      "shore": {
+        "ref": "POLYGON_NatureBiomes_AlpineMountain/SM_Env_Rock_Pebbles_01",
+        "color": "#5c5b57",
+        "pack": "POLYGON_NatureBiomes_AlpineMountain",
+        "asset": "SM_Env_Rock_Pebbles_01",
+        "assetId": 14644,
+        "material": "PolygonNatureBiomesS2_Alpine_Texture_01.png",
+        "texture": "PolygonNatureBiomesS2_Alpine_Texture_01",
+        "uv": [
+          0.2937,
+          0.8536
+        ]
+      },
+      "seabed": {
+        "ref": "POLYGON_NatureBiomes_AlpineMountain/SM_Env_Rock_Pebbles_01",
+        "color": "#5c5b57",
+        "pack": "POLYGON_NatureBiomes_AlpineMountain",
+        "asset": "SM_Env_Rock_Pebbles_01",
+        "assetId": 14644,
+        "material": "PolygonNatureBiomesS2_Alpine_Texture_01.png",
+        "texture": "PolygonNatureBiomesS2_Alpine_Texture_01",
+        "uv": [
+          0.2937,
+          0.8536
+        ]
+      },
+      "water": {
+        "ref": "#4a7fa8",
+        "color": "#4a7fa8"
+      },
+      "skirt": {
+        "ref": "POLYGON_NatureBiomes_AlpineMountain/SM_Env_Rock_Cliff_01",
+        "color": "#56544f",
+        "pack": "POLYGON_NatureBiomes_AlpineMountain",
+        "asset": "SM_Env_Rock_Cliff_01",
+        "assetId": 14636,
+        "material": "PolygonNatureBiomesS2_Alpine_Texture_01.png",
+        "texture": "PolygonNatureBiomesS2_Alpine_Texture_01",
+        "uv": [
+          0.2716,
+          0.8731
+        ]
+      }
+    }
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "tile",
+  "bounds": {
+    "min": [
+      -31.2115,
+      -1.48,
+      0
+    ],
+    "max": [
+      1841.4785,
+      27.432,
+      1872.69
+    ],
+    "size": [
+      1872.69,
+      28.912,
+      1872.69
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        905.1335,
+        12.976,
+        936.345
+      ],
+      "size": [
+        1872.69,
+        28.912,
+        1872.69
+      ]
+    },
+    "trimesh": {
+      "node": "collider",
+      "triangles": 7200,
+      "vertices": 3721
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "terrain": {
+    "cell": 62.423,
+    "step": 27.432,
+    "tiles": [
+      30,
+      30
+    ],
+    "gridMin": [
+      -31.2115,
+      0
+    ],
+    "subdiv": 2,
+    "shape": "track",
+    "chunks": [
+      {
+        "node": "terrain_0_0",
+        "tiles": [
+          0,
+          0,
+          10,
+          10
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_1_0",
+        "tiles": [
+          10,
+          0,
+          20,
+          10
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_2_0",
+        "tiles": [
+          20,
+          0,
+          30,
+          10
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_0_1",
+        "tiles": [
+          0,
+          10,
+          10,
+          20
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_1_1",
+        "tiles": [
+          10,
+          10,
+          20,
+          20
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_2_1",
+        "tiles": [
+          20,
+          10,
+          30,
+          20
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_0_2",
+        "tiles": [
+          0,
+          20,
+          10,
+          30
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_1_2",
+        "tiles": [
+          10,
+          20,
+          20,
+          30
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_2_2",
+        "tiles": [
+          20,
+          20,
+          30,
+          30
+        ],
+        "triangles": 800
+      }
+    ],
+    "water": {
+      "level": 0.02,
+      "nodes": [
+        "water_1_0",
+        "water_0_1"
+      ],
+      "tiles": 16
+    },
+    "scatter": [
+      {
+        "asset": "SM_Env_Grass_01",
+        "pack": "POLYGON_NatureBiomes_AlpineMountain",
+        "assetId": 14581,
+        "node": "scatter_0",
+        "count": 1324
+      },
+      {
+        "asset": "SM_Env_Flowers_01",
+        "pack": "POLYGON_NatureBiomes_AlpineMountain",
+        "assetId": 14598,
+        "node": "scatter_1",
+        "count": 665
+      },
+      {
+        "asset": "SM_Generic_Small_Rocks_03",
+        "pack": "POLYGON_Gang_Warfare",
+        "assetId": 1728,
+        "node": "scatter_2",
+        "count": 659
+      },
+      {
+        "asset": "SM_Env_Rock_01",
+        "pack": "POLYGON_NatureBiomes_MeadowForest",
+        "assetId": 15266,
+        "node": "scatter_3",
+        "count": 144
+      }
+    ]
+  },
+  "compress": "meshopt"
+}

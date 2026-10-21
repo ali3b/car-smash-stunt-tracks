@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "name": "tp-corner-large",
+  "source": {
+    "kind": "trackpiece",
+    "preset": "curve-left",
+    "materials": {
+      "deck": {
+        "ref": "POLYGON_City/SM_Env_Road_Bare_01",
+        "color": "#454545",
+        "pack": "POLYGON_City",
+        "asset": "SM_Env_Road_Bare_01",
+        "assetId": 156,
+        "material": "PolygonCity_Texture.png",
+        "texture": "PolygonCity_Texture",
+        "uv": [
+          0.832,
+          0.3314
+        ]
+      },
+      "kerb": {
+        "ref": "POLYGON_Pro_Racer/SM_Prop_Barrier_05#c0392b",
+        "color": "#a14c40",
+        "pack": "POLYGON_Pro_Racer",
+        "asset": "SM_Prop_Barrier_05",
+        "assetId": 13344,
+        "material": "PolygonProRacer_VehicleTexture_01.png",
+        "texture": "PolygonProRacer_VehicleTexture_01",
+        "uv": [
+          0.1441,
+          0.7916
+        ]
+      },
+      "kerbAlt": {
+        "ref": "POLYGON_Pro_Racer/SM_Prop_Barrier_05#ffffff",
+        "color": "#c5c2bf",
+        "pack": "POLYGON_Pro_Racer",
+        "asset": "SM_Prop_Barrier_05",
+        "assetId": 13344,
+        "material": "PolygonProRacer_VehicleTexture_01.png",
+        "texture": "PolygonProRacer_VehicleTexture_01",
+        "uv": [
+          0.2512,
+          0.7916
+        ]
+      },
+      "wall": {
+        "ref": "POLYGON_Pro_Racer/SM_Env_Road_Wall_01",
+        "color": "#696767",
+        "pack": "POLYGON_Pro_Racer",
+        "asset": "SM_Env_Road_Wall_01",
+        "assetId": 13297,
+        "material": "PolygonProRacer_Texture_01_A.png",
+        "texture": "PolygonProRacer_Texture_01_A",
+        "uv": [
+          0.1023,
+          0.7245
+        ]
+      },
+      "support": {
+        "ref": "POLYGON_City/SM_Env_Bridge_Pillar_01",
+        "color": "#95908b",
+        "pack": "POLYGON_City",
+        "asset": "SM_Env_Bridge_Pillar_01",
+        "assetId": 133,
+        "material": "PolygonCity_Texture.png",
+        "texture": "PolygonCity_Texture",
+        "uv": [
+          0.3826,
+          0.553
+        ]
+      }
+    }
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "entry",
+  "bounds": {
+    "min": [
+      -7.715,
+      -0.5,
+      0
+    ],
+    "max": [
+      93.63,
+      0.8,
+      101.345
+    ],
+    "size": [
+      101.345,
+      1.3,
+      101.345
+    ]
+  },
+  "parts": [],
+  "sockets": [
+    {
+      "name": "in",
+      "node": "tp-corner-large",
+      "pos": [
+        0,
+        0,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "forward": [
+        0,
+        0,
+        1
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "dir": "in",
+      "edge": "road",
+      "width": 14.63,
+      "bank": 0
+    },
+    {
+      "name": "out",
+      "node": "tp-corner-large",
+      "pos": [
+        93.63,
+        0,
+        93.63
+      ],
+      "rot": [
+        0,
+        0.7071,
+        0,
+        0.7071
+      ],
+      "forward": [
+        1,
+        0,
+        0
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "dir": "out",
+      "edge": "road",
+      "width": 14.63,
+      "bank": 0
+    }
+  ],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        42.9575,
+        0.15,
+        50.6725
+      ],
+      "size": [
+        101.345,
+        1.3,
+        101.345
+      ]
+    },
+    "trimesh": {
+      "node": "collider",
+      "triangles": 444,
+      "vertices": 450
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "trackpiece": {
+    "cell": 62.42,
+    "footprint": [
+      2,
+      2
+    ],
+    "gridMin": [
+      -31.21,
+      0
+    ],
+    "length": 147.0737,
+    "supports": "auto"
+  },
+  "compress": "meshopt"
+}

@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "name": "sc-jungle-tree",
+  "source": {
+    "pack": "POLYGON_NatureBiomes_TropicalJungle",
+    "asset": "SM_Env_Tree_Banana_03",
+    "assetId": 14822
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -3.5332,
+      0,
+      -3.618
+    ],
+    "max": [
+      3.5332,
+      11,
+      3.618
+    ],
+    "size": [
+      7.0664,
+      11,
+      7.236
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        5.5,
+        0
+      ],
+      "size": [
+        7.0664,
+        11,
+        7.236
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.430968,
+    "fit": {
+      "height": 11
+    }
+  },
+  "compress": "meshopt",
+  "lods": [
+    {
+      "level": 0,
+      "node": "LOD0",
+      "ratio": 1,
+      "triangles": 516,
+      "source": "model"
+    },
+    {
+      "level": 1,
+      "node": "LOD1",
+      "ratio": 0.5,
+      "triangles": 282,
+      "source": "synty"
+    },
+    {
+      "level": 2,
+      "node": "LOD2",
+      "ratio": 0.15,
+      "triangles": 16,
+      "source": "synty"
+    },
+    {
+      "level": 3,
+      "node": "LOD3",
+      "ratio": 0.02,
+      "triangles": 16,
+      "source": "synty"
+    }
+  ],
+  "warnings": [
+    "lods: LOD3 kept 16 triangles, not 10 (2%): the mesh cannot lose more without changing shape"
+  ]
+}

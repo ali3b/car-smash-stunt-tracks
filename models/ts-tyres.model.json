@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "ts-tyres",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Prop_Barrier_Tyres_Long_01",
+    "assetId": 13367
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -8,
+      0,
+      -0.7791
+    ],
+    "max": [
+      8,
+      2.1029,
+      0.7791
+    ],
+    "size": [
+      16,
+      2.1029,
+      1.5582
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        1.0515,
+        0
+      ],
+      "size": [
+        16,
+        2.1029,
+        1.5582
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.155543,
+    "fit": {
+      "width": 16
+    }
+  },
+  "compress": "meshopt"
+}

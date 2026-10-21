@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "bg-volcano",
+  "source": {
+    "pack": "POLYGON_NatureBiomes_TropicalJungle",
+    "asset": "SM_Env_Volcano_01",
+    "assetId": 14842
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -8.3817,
+      0,
+      -8.407
+    ],
+    "max": [
+      8.3817,
+      17.4168,
+      8.407
+    ],
+    "size": [
+      16.7634,
+      17.4168,
+      16.814
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        8.7084,
+        0
+      ],
+      "size": [
+        16.7634,
+        17.4168,
+        16.814
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "name": "sc-farmhouse",
+  "source": {
+    "pack": "POLYGON_Farm",
+    "asset": "SM_Bld_Farmhouse_01",
+    "assetId": 15461
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -9,
+      0,
+      -7.3255
+    ],
+    "max": [
+      9,
+      13.143,
+      7.3255
+    ],
+    "size": [
+      18,
+      13.143,
+      14.651
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Bld_Farmhouse_01_Door_01",
+      "role": "door",
+      "pivot": [
+        -0.3716,
+        1.3964,
+        3.8875
+      ],
+      "hinge": {
+        "pos": [
+          -0.3716,
+          1.3964,
+          3.8875
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Bld_Farmhouse_01_Door_02",
+      "role": "door",
+      "pivot": [
+        -7.0607,
+        1.3964,
+        0.543
+      ],
+      "hinge": {
+        "pos": [
+          -7.0607,
+          1.3964,
+          0.543
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Bld_Farmhouse_01_Door_03",
+      "role": "door",
+      "pivot": [
+        -1.5741,
+        1.411,
+        -2.0729
+      ],
+      "hinge": {
+        "pos": [
+          -1.5741,
+          1.411,
+          -2.0729
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Bld_Farmhouse_01_Glass",
+      "role": "static",
+      "pivot": [
+        -1.3937,
+        5.3245,
+        -1.396
+      ]
+    }
+  ],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        6.5715,
+        0
+      ],
+      "size": [
+        18,
+        13.143,
+        14.651
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.337809,
+    "fit": {
+      "width": 18
+    }
+  },
+  "compress": "meshopt"
+}

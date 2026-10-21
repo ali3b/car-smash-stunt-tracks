@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "name": "car-super",
+  "source": {
+    "pack": "POLYGON_Palm_City",
+    "asset": "SM_Veh_Supercar_02",
+    "assetId": 2521
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "axle-centre",
+  "bounds": {
+    "min": [
+      -1.0273,
+      -0.3106,
+      -2.1306
+    ],
+    "max": [
+      1.0391,
+      0.853,
+      2.3694
+    ],
+    "size": [
+      2.0664,
+      1.1636,
+      4.5
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Veh_Supercar_02_Door_L_Glass",
+      "role": "door",
+      "pivot": [
+        0.8043,
+        0.15,
+        1.129
+      ],
+      "hinge": {
+        "pos": [
+          0.8043,
+          0.15,
+          1.129
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Supercar_02_Door_L",
+      "role": "door",
+      "pivot": [
+        0.8043,
+        0.15,
+        1.129
+      ],
+      "hinge": {
+        "pos": [
+          0.8043,
+          0.15,
+          1.129
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Supercar_02_Door_R_Glass",
+      "role": "door",
+      "pivot": [
+        -0.7925,
+        0.15,
+        1.129
+      ],
+      "hinge": {
+        "pos": [
+          -0.7925,
+          0.15,
+          1.129
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Supercar_02_Door_R",
+      "role": "door",
+      "pivot": [
+        -0.7925,
+        0.15,
+        1.129
+      ],
+      "hinge": {
+        "pos": [
+          -0.7925,
+          0.15,
+          1.129
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Supercar_02_Glass",
+      "role": "static",
+      "pivot": [
+        0.0059,
+        -0.31,
+        0.0105
+      ]
+    },
+    {
+      "node": "SM_Veh_Supercar_02_Steering_W",
+      "role": "steering",
+      "pivot": [
+        0.0059,
+        -0.31,
+        0.0105
+      ]
+    },
+    {
+      "node": "SM_Veh_Supercar_02_Wheel_FL",
+      "role": "wheel",
+      "pivot": [
+        0.8013,
+        -0.017,
+        1.3035
+      ],
+      "radius": 0.2936,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Supercar_02_Wheel_FR",
+      "role": "wheel",
+      "pivot": [
+        -0.7895,
+        -0.017,
+        1.3035
+      ],
+      "radius": 0.2936,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Supercar_02_Wheel_RL",
+      "role": "wheel",
+      "pivot": [
+        0.8088,
+        0.017,
+        -1.3035
+      ],
+      "radius": 0.3257,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Supercar_02_Wheel_RR",
+      "role": "wheel",
+      "pivot": [
+        -0.8205,
+        0.017,
+        -1.3035
+      ],
+      "radius": 0.3257,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "wheels": {
+    "fl": {
+      "node": "SM_Veh_Supercar_02_Wheel_FL",
+      "radius": 0.2936,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": true,
+      "pos": [
+        0.8013,
+        -0.017,
+        1.3035
+      ]
+    },
+    "fr": {
+      "node": "SM_Veh_Supercar_02_Wheel_FR",
+      "radius": 0.2936,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": true,
+      "pos": [
+        -0.7895,
+        -0.017,
+        1.3035
+      ]
+    },
+    "rl": {
+      "node": "SM_Veh_Supercar_02_Wheel_RL",
+      "radius": 0.3257,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": false,
+      "pos": [
+        0.8088,
+        0.017,
+        -1.3035
+      ]
+    },
+    "rr": {
+      "node": "SM_Veh_Supercar_02_Wheel_RR",
+      "radius": 0.3257,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": false,
+      "pos": [
+        -0.8205,
+        0.017,
+        -1.3035
+      ]
+    }
+  },
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0.0059,
+        0.2712,
+        0.1194
+      ],
+      "size": [
+        2.0664,
+        1.1636,
+        4.5
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 0.810183,
+    "fit": {
+      "length": 4.5
+    }
+  },
+  "variants": [
+    {
+      "name": "red",
+      "tint": "#c62828"
+    },
+    {
+      "name": "blue",
+      "tint": "#1e5aa8"
+    },
+    {
+      "name": "yellow",
+      "tint": "#f2b705"
+    },
+    {
+      "name": "green",
+      "tint": "#2e7d32"
+    },
+    {
+      "name": "white",
+      "tint": "#e8e8e8"
+    },
+    {
+      "name": "black",
+      "tint": "#202024"
+    },
+    {
+      "name": "orange",
+      "tint": "#ef6c00"
+    },
+    {
+      "name": "purple",
+      "tint": "#6a1b9a"
+    }
+  ],
+  "compress": "meshopt"
+}

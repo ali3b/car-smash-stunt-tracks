@@ -1,0 +1,17 @@
+{
+  "name": "Beach_01",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "path": "POLYGON_Pro_Racer_v3/SourceFiles/Textures/ProRacer/Ground/Beach_01.png"
+  },
+  "width": 512,
+  "height": 512,
+  "background": "opaque",
+  "frames": null,
+  "format": "png",
+  "sourceSize": [
+    2048,
+    2048
+  ],
+  "image": "ground-sand.png"
+}

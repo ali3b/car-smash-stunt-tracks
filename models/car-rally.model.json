@@ -1,0 +1,491 @@
+{
+  "version": 1,
+  "name": "car-rally",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Veh_Rally_01",
+    "assetId": 12667
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "axle-centre",
+  "bounds": {
+    "min": [
+      -1.0151,
+      -0.343,
+      -2.2371
+    ],
+    "max": [
+      1.0076,
+      1.1315,
+      2.1629
+    ],
+    "size": [
+      2.0227,
+      1.4745,
+      4.4
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Veh_Rally_01_Spoiler_01",
+      "role": null,
+      "pivot": [
+        -0.0037,
+        -0.3097,
+        -0.0413
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_Boot_01",
+      "role": "lid",
+      "pivot": [
+        -0.0037,
+        0.3328,
+        -1.9751
+      ],
+      "hinge": {
+        "pos": [
+          -0.0037,
+          0.3328,
+          -1.9751
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Rally_01_Door_FL_Glass_01",
+      "role": "door",
+      "pivot": [
+        0.6828,
+        0.8135,
+        0.5686
+      ],
+      "hinge": {
+        "pos": [
+          0.6828,
+          0.8135,
+          0.5686
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Rally_01_Door_FL_01",
+      "role": "door",
+      "pivot": [
+        0.7835,
+        0.5174,
+        0.8285
+      ],
+      "hinge": {
+        "pos": [
+          0.7835,
+          0.5174,
+          0.8285
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Rally_01_Door_FR_Glass_01",
+      "role": "door",
+      "pivot": [
+        -0.6902,
+        0.8135,
+        0.5686
+      ],
+      "hinge": {
+        "pos": [
+          -0.6902,
+          0.8135,
+          0.5686
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Rally_01_Door_FR_01",
+      "role": "door",
+      "pivot": [
+        -0.7909,
+        0.5174,
+        0.8285
+      ],
+      "hinge": {
+        "pos": [
+          -0.7909,
+          0.5174,
+          0.8285
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Rally_01_Door_RL_Glass_01",
+      "role": "door",
+      "pivot": [
+        0.6697,
+        0.8469,
+        -0.3804
+      ],
+      "hinge": {
+        "pos": [
+          0.6697,
+          0.8469,
+          -0.3804
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Rally_01_Door_RL_01",
+      "role": "door",
+      "pivot": [
+        0.7157,
+        0.5201,
+        -0.2402
+      ],
+      "hinge": {
+        "pos": [
+          0.7157,
+          0.5201,
+          -0.2402
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Rally_01_Door_RR_Glass_01",
+      "role": "door",
+      "pivot": [
+        -0.6771,
+        0.8469,
+        -0.3804
+      ],
+      "hinge": {
+        "pos": [
+          -0.6771,
+          0.8469,
+          -0.3804
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Rally_01_Door_RR_01",
+      "role": "door",
+      "pivot": [
+        -0.7231,
+        0.5201,
+        -0.2402
+      ],
+      "hinge": {
+        "pos": [
+          -0.7231,
+          0.5201,
+          -0.2402
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Rally_01_EBrake_01",
+      "role": "lever",
+      "pivot": [
+        -0.0037,
+        -0.3097,
+        -0.0413
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_Engine_01",
+      "role": null,
+      "pivot": [
+        -0.0037,
+        -0.3097,
+        -0.0413
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_Gearstick_01",
+      "role": "lever",
+      "pivot": [
+        -0.0037,
+        -0.3097,
+        -0.0413
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_Glass_01",
+      "role": "static",
+      "pivot": [
+        -0.0037,
+        -0.3097,
+        -0.0413
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_Mudflaps_01",
+      "role": "static",
+      "pivot": [
+        -0.0037,
+        -0.3097,
+        -0.0413
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_RollCage_01",
+      "role": null,
+      "pivot": [
+        -0.0037,
+        -0.3097,
+        -0.0413
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_Seat_01",
+      "role": "static",
+      "pivot": [
+        -0.0037,
+        -0.3097,
+        -0.0413
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_SteeringW_01",
+      "role": "steering",
+      "pivot": [
+        -0.0037,
+        -0.2041,
+        -0.1676
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_Wheel_FL_01",
+      "role": "wheel",
+      "pivot": [
+        0.793,
+        0,
+        1.2852
+      ],
+      "radius": 0.343,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_Wheel_FR_01",
+      "role": "wheel",
+      "pivot": [
+        -0.7929,
+        0,
+        1.2905
+      ],
+      "radius": 0.343,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_Wheel_RL_01",
+      "role": "wheel",
+      "pivot": [
+        0.7706,
+        0,
+        -1.2903
+      ],
+      "radius": 0.343,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_Wheel_RR_01",
+      "role": "wheel",
+      "pivot": [
+        -0.7707,
+        0,
+        -1.2854
+      ],
+      "radius": 0.343,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Rally_01_Windscreen_Sticker_01",
+      "role": "static",
+      "pivot": [
+        -0.0037,
+        -0.3097,
+        -0.0413
+      ]
+    }
+  ],
+  "wheels": {
+    "fl": {
+      "node": "SM_Veh_Rally_01_Wheel_FL_01",
+      "radius": 0.343,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": true,
+      "pos": [
+        0.793,
+        0,
+        1.2852
+      ]
+    },
+    "fr": {
+      "node": "SM_Veh_Rally_01_Wheel_FR_01",
+      "radius": 0.343,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": true,
+      "pos": [
+        -0.7929,
+        0,
+        1.2905
+      ]
+    },
+    "rl": {
+      "node": "SM_Veh_Rally_01_Wheel_RL_01",
+      "radius": 0.343,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": false,
+      "pos": [
+        0.7706,
+        0,
+        -1.2903
+      ]
+    },
+    "rr": {
+      "node": "SM_Veh_Rally_01_Wheel_RR_01",
+      "radius": 0.343,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": false,
+      "pos": [
+        -0.7707,
+        0,
+        -1.2854
+      ]
+    }
+  },
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        -0.0037,
+        0.3943,
+        -0.0371
+      ],
+      "size": [
+        2.0227,
+        1.4745,
+        4.4
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 0.882425,
+    "fit": {
+      "length": 4.4
+    }
+  },
+  "variants": [
+    {
+      "name": "red",
+      "tint": "#c62828"
+    },
+    {
+      "name": "blue",
+      "tint": "#1e5aa8"
+    },
+    {
+      "name": "yellow",
+      "tint": "#f2b705"
+    },
+    {
+      "name": "green",
+      "tint": "#2e7d32"
+    },
+    {
+      "name": "white",
+      "tint": "#e8e8e8"
+    },
+    {
+      "name": "black",
+      "tint": "#202024"
+    },
+    {
+      "name": "orange",
+      "tint": "#ef6c00"
+    },
+    {
+      "name": "purple",
+      "tint": "#6a1b9a"
+    }
+  ],
+  "compress": "meshopt"
+}

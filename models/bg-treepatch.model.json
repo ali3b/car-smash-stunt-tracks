@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "bg-treepatch",
+  "source": {
+    "pack": "POLYGON_Farm",
+    "asset": "SM_Generic_Tree_Patch_02",
+    "assetId": 15585
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -12.3254,
+      0,
+      -7.2102
+    ],
+    "max": [
+      12.3254,
+      10.6282,
+      7.2102
+    ],
+    "size": [
+      24.6508,
+      10.6282,
+      14.4204
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        5.3141,
+        0
+      ],
+      "size": [
+        24.6508,
+        10.6282,
+        14.4204
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

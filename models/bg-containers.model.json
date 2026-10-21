@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "bg-containers",
+  "source": {
+    "pack": "POLYGON_Street_Racer",
+    "asset": "SM_Prop_Container_Stack_07",
+    "assetId": 17120
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -10.4455,
+      0,
+      -10.5124
+    ],
+    "max": [
+      10.4455,
+      7.77,
+      10.5124
+    ],
+    "size": [
+      20.891,
+      7.77,
+      21.0248
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        3.885,
+        0
+      ],
+      "size": [
+        20.891,
+        7.77,
+        21.0248
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

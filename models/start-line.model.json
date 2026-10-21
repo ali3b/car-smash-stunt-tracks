@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "start-line",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Env_RoadMarkings_StartingLine_01",
+    "assetId": 13129
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -7.58,
+      0,
+      -0.8883
+    ],
+    "max": [
+      7.58,
+      0,
+      0.8883
+    ],
+    "size": [
+      15.16,
+      0,
+      1.7766
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        15.16,
+        0,
+        1.7766
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

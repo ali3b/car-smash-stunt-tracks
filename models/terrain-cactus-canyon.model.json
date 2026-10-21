@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "name": "terrain-cactus-canyon",
+  "source": {
+    "kind": "terrain",
+    "tile": null,
+    "materials": {
+      "ground": {
+        "ref": "POLYGON_NatureBiomes_AridDesert/SM_Env_DirtRoad_Straight_01#e0c08a",
+        "color": "#ac9a82",
+        "pack": "POLYGON_NatureBiomes_AridDesert",
+        "asset": "SM_Env_DirtRoad_Straight_01",
+        "assetId": 12454,
+        "material": "PolygonNatureBiomesS2_AridDesert_Texture_01.png",
+        "texture": "PolygonNatureBiomesS2_AridDesert_Texture_01",
+        "uv": [
+          0.0394,
+          0.6499
+        ]
+      },
+      "slope": {
+        "ref": "POLYGON_NatureBiomes_AridDesert/SM_Env_Rock_Cliff_01",
+        "color": "#83563d",
+        "pack": "POLYGON_NatureBiomes_AridDesert",
+        "asset": "SM_Env_Rock_Cliff_01",
+        "assetId": 12487,
+        "material": "PolygonNatureBiomesS2_AridDesert_Texture_01_B.png",
+        "texture": "PolygonNatureBiomesS2_AridDesert_Texture_01_B",
+        "uv": [
+          0.3249,
+          0.8739
+        ]
+      },
+      "shore": {
+        "ref": "POLYGON_NatureBiomes_AridDesert/SM_Env_Crater_01",
+        "color": "#96826c",
+        "pack": "POLYGON_NatureBiomes_AridDesert",
+        "asset": "SM_Env_Crater_01",
+        "assetId": 12447,
+        "material": "PolygonNatureBiomesS2_AridDesert_Texture_01.png",
+        "texture": "PolygonNatureBiomesS2_AridDesert_Texture_01",
+        "uv": [
+          0.0389,
+          0.6657
+        ]
+      },
+      "seabed": {
+        "ref": "POLYGON_NatureBiomes_AridDesert/SM_Env_Crater_01",
+        "color": "#96826c",
+        "pack": "POLYGON_NatureBiomes_AridDesert",
+        "asset": "SM_Env_Crater_01",
+        "assetId": 12447,
+        "material": "PolygonNatureBiomesS2_AridDesert_Texture_01.png",
+        "texture": "PolygonNatureBiomesS2_AridDesert_Texture_01",
+        "uv": [
+          0.0389,
+          0.6657
+        ]
+      },
+      "water": {
+        "ref": "#3b9cb0",
+        "color": "#3b9cb0"
+      },
+      "skirt": {
+        "ref": "POLYGON_NatureBiomes_AridDesert/SM_Env_Rock_Cliff_01",
+        "color": "#83563d",
+        "pack": "POLYGON_NatureBiomes_AridDesert",
+        "asset": "SM_Env_Rock_Cliff_01",
+        "assetId": 12487,
+        "material": "PolygonNatureBiomesS2_AridDesert_Texture_01_B.png",
+        "texture": "PolygonNatureBiomesS2_AridDesert_Texture_01_B",
+        "uv": [
+          0.3249,
+          0.8739
+        ]
+      }
+    }
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "tile",
+  "bounds": {
+    "min": [
+      -31.2115,
+      -1.48,
+      0
+    ],
+    "max": [
+      1841.4785,
+      27.432,
+      1872.69
+    ],
+    "size": [
+      1872.69,
+      28.912,
+      1872.69
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        905.1335,
+        12.976,
+        936.345
+      ],
+      "size": [
+        1872.69,
+        28.912,
+        1872.69
+      ]
+    },
+    "trimesh": {
+      "node": "collider",
+      "triangles": 7200,
+      "vertices": 3721
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "terrain": {
+    "cell": 62.423,
+    "step": 27.432,
+    "tiles": [
+      30,
+      30
+    ],
+    "gridMin": [
+      -31.2115,
+      0
+    ],
+    "subdiv": 2,
+    "shape": "track",
+    "chunks": [
+      {
+        "node": "terrain_0_0",
+        "tiles": [
+          0,
+          0,
+          10,
+          10
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_1_0",
+        "tiles": [
+          10,
+          0,
+          20,
+          10
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_2_0",
+        "tiles": [
+          20,
+          0,
+          30,
+          10
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_0_1",
+        "tiles": [
+          0,
+          10,
+          10,
+          20
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_1_1",
+        "tiles": [
+          10,
+          10,
+          20,
+          20
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_2_1",
+        "tiles": [
+          20,
+          10,
+          30,
+          20
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_0_2",
+        "tiles": [
+          0,
+          20,
+          10,
+          30
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_1_2",
+        "tiles": [
+          10,
+          20,
+          20,
+          30
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_2_2",
+        "tiles": [
+          20,
+          20,
+          30,
+          30
+        ],
+        "triangles": 800
+      }
+    ],
+    "water": {
+      "level": 0.02,
+      "nodes": [
+        "water_1_0",
+        "water_1_1"
+      ],
+      "tiles": 30
+    },
+    "scatter": [
+      {
+        "asset": "SM_Env_Grass_01",
+        "pack": "POLYGON_NatureBiomes_AridDesert",
+        "assetId": 12436,
+        "node": "scatter_0",
+        "count": 1099
+      },
+      {
+        "asset": "SM_Generic_Small_Rocks_03",
+        "pack": "POLYGON_Gang_Warfare",
+        "assetId": 1728,
+        "node": "scatter_1",
+        "count": 1100
+      },
+      {
+        "asset": "SM_Env_Rock_02",
+        "pack": "POLYGON_NatureBiomes_AridDesert",
+        "assetId": 12471,
+        "node": "scatter_2",
+        "count": 127
+      }
+    ]
+  },
+  "compress": "meshopt"
+}

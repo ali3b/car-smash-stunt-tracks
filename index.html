@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Smash Stunt Tracks</title>
+    <meta name="description" content="Car Smash Stunt Tracks: a 3D stunt-track racer in the browser, with loops, corkscrews, pipes, jumps, rivals, replays and a track editor." />
+    <meta name="theme-color" content="#0b0e1c" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230b0e1c'/%3E%3Cpath d='M6 4v25' stroke='%23ffd23c' stroke-width='3'/%3E%3Cg fill='%23fff'%3E%3Crect x='8' y='5' width='5' height='5'/%3E%3Crect x='18' y='5' width='5' height='5'/%3E%3Crect x='13' y='10' width='5' height='5'/%3E%3Crect x='23' y='10' width='4' height='5'/%3E%3Crect x='8' y='15' width='5' height='5'/%3E%3Crect x='18' y='15' width='5' height='5'/%3E%3C/g%3E%3Cg fill='%23ff5a1f'%3E%3Crect x='13' y='5' width='5' height='5'/%3E%3Crect x='23' y='5' width='4' height='5'/%3E%3Crect x='8' y='10' width='5' height='5'/%3E%3Crect x='18' y='10' width='5' height='5'/%3E%3Crect x='13' y='15' width='5' height='5'/%3E%3Crect x='23' y='15' width='4' height='5'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <style>
+      html, body { margin: 0; height: 100%; background: #10141a; overflow: hidden; }
+      canvas { display: block; }
+      /* The boot screen: shown until the game is ready (src/main.ts fills the bar and removes it). */
+      #boot { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+        padding: 16px; box-sizing: border-box; background: #0b0e1c; color: #e8e6f0; font: 12px/1.8 ui-monospace, 'Cascadia Mono', Menlo, Consolas, monospace; text-align: center; }
+      #boot h1 { margin: 0; font-size: clamp(22px, 5vw, 44px); letter-spacing: 3px; color: #ffd23c; transform: skewX(-10deg); text-shadow: 3px 3px 0 #ff5a1f, 6px 6px 0 rgba(0,0,0,.5); }
+      #boot .bar { position: relative; width: min(360px, 80vw); height: 12px; background: rgba(255,255,255,.08); }
+      #boot .bar i { position: absolute; inset: 0 auto 0 0; width: 4%; background: #ff5a1f; transition: width .15s; }
+      #boot .msg { max-width: 560px; color: #a9a6bd; }
+      #boot.error .bar { display: none; }
+      #boot.error .msg { color: #fff; }
+    </style>
+    <script type="module" crossorigin src="./assets/index-CGIia4M-.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/three-r-taunz7.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-qn47FiQ7.css">
+  </head>
+  <body>
+    <div id="boot"><h1>CAR SMASH STUNT TRACKS</h1><div class="bar"><i></i></div><div class="msg">Loading…</div></div>
+  </body>
+</html>

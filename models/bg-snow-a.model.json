@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "bg-snow-a",
+  "source": {
+    "pack": "POLYGON_War",
+    "asset": "SM_Env_Mountains_Snow_01",
+    "assetId": 724
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -11.9458,
+      0,
+      -11.8062
+    ],
+    "max": [
+      11.9458,
+      7.2363,
+      11.8062
+    ],
+    "size": [
+      23.8916,
+      7.2363,
+      23.6124
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        3.6182,
+        0
+      ],
+      "size": [
+        23.8916,
+        7.2363,
+        23.6124
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

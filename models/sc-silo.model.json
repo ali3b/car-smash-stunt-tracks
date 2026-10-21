@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "sc-silo",
+  "source": {
+    "pack": "POLYGON_Farm",
+    "asset": "SM_Bld_Silo_01",
+    "assetId": 15469
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -3.2993,
+      0,
+      -3.5322
+    ],
+    "max": [
+      3.2993,
+      24,
+      3.5322
+    ],
+    "size": [
+      6.5986,
+      24,
+      7.0644
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        12,
+        0
+      ],
+      "size": [
+        6.5986,
+        24,
+        7.0644
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.290825,
+    "fit": {
+      "height": 24
+    }
+  },
+  "compress": "meshopt"
+}

@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "name": "sc-palm",
+  "source": {
+    "pack": "POLYGON_Palm_City",
+    "asset": "SM_Env_Tree_Palm_02",
+    "assetId": 3048
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -4.9451,
+      0,
+      -4.66
+    ],
+    "max": [
+      4.9451,
+      22,
+      4.66
+    ],
+    "size": [
+      9.8902,
+      22,
+      9.32
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        11,
+        0
+      ],
+      "size": [
+        9.8902,
+        22,
+        9.32
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.381522,
+    "fit": {
+      "height": 22
+    }
+  },
+  "compress": "meshopt",
+  "lods": [
+    {
+      "level": 0,
+      "node": "LOD0",
+      "ratio": 1,
+      "triangles": 1828,
+      "source": "model"
+    },
+    {
+      "level": 1,
+      "node": "LOD1",
+      "ratio": 0.5,
+      "triangles": 731,
+      "source": "synty"
+    },
+    {
+      "level": 2,
+      "node": "LOD2",
+      "ratio": 0.15,
+      "triangles": 559,
+      "source": "synty"
+    },
+    {
+      "level": 3,
+      "node": "LOD3",
+      "ratio": 0.02,
+      "triangles": 547,
+      "source": "synty"
+    }
+  ],
+  "warnings": [
+    "lods: LOD2 kept 559 triangles, not 274 (15%): the mesh cannot lose more without changing shape",
+    "lods: LOD3 kept 547 triangles, not 37 (2%): the mesh cannot lose more without changing shape"
+  ]
+}

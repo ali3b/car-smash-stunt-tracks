@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "ramp",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Env_Road_Ramp_01",
+    "assetId": 13294
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -11.7615,
+      0,
+      -11.6535
+    ],
+    "max": [
+      11.7615,
+      5.7287,
+      11.6535
+    ],
+    "size": [
+      23.523,
+      5.7287,
+      23.307
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        2.8644,
+        0
+      ],
+      "size": [
+        23.523,
+        5.7287,
+        23.307
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

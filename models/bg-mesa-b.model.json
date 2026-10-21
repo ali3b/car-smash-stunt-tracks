@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "bg-mesa-b",
+  "source": {
+    "pack": "POLYGON_NatureBiomes_AridDesert",
+    "asset": "SM_Env_Rock_Cliff_04",
+    "assetId": 12490
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -12.2458,
+      0,
+      -6.0291
+    ],
+    "max": [
+      12.2458,
+      10.358,
+      6.0291
+    ],
+    "size": [
+      24.4916,
+      10.358,
+      12.0582
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        5.179,
+        0
+      ],
+      "size": [
+        24.4916,
+        10.358,
+        12.0582
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

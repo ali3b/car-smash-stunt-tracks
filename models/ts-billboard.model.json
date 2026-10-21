@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "ts-billboard",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Prop_Billboard_Large_02",
+    "assetId": 13370
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -8,
+      0,
+      -1.3522
+    ],
+    "max": [
+      8,
+      7.8939,
+      1.3522
+    ],
+    "size": [
+      16,
+      7.8939,
+      2.7044
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        3.947,
+        0
+      ],
+      "size": [
+        16,
+        7.8939,
+        2.7044
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.5536,
+    "fit": {
+      "width": 16
+    }
+  },
+  "compress": "meshopt"
+}

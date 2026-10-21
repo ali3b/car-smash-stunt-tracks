@@ -1,0 +1,17 @@
+{
+  "name": "Dirt_Texture_Arid_01",
+  "source": {
+    "pack": "POLYGON_NatureBiomes_AridDesert",
+    "path": "POLYGON_NatureBiomes_AridDesert_v3/Textures/Dirt_Texture_Arid_01.png"
+  },
+  "width": 512,
+  "height": 512,
+  "background": "opaque",
+  "frames": null,
+  "format": "png",
+  "sourceSize": [
+    2048,
+    2048
+  ],
+  "image": "ground-arid.png"
+}

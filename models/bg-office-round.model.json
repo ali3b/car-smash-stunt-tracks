@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "bg-office-round",
+  "source": {
+    "pack": "POLYGON_City",
+    "asset": "SM_Bld_OfficeRound_01",
+    "assetId": 93
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -14.367,
+      0,
+      -14.3728
+    ],
+    "max": [
+      14.367,
+      50,
+      14.3728
+    ],
+    "size": [
+      28.734,
+      50,
+      28.7456
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        25,
+        0
+      ],
+      "size": [
+        28.734,
+        50,
+        28.7456
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.303564,
+    "fit": {
+      "height": 50
+    }
+  },
+  "compress": "meshopt"
+}

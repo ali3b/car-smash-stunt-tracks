@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "name": "sky-country",
+  "source": {
+    "kind": "skydome",
+    "preset": "country",
+    "ring": [
+      {
+        "ref": "POLYGON_Pro_Racer/SM_Gen_Env_Hill_01",
+        "pack": "POLYGON_Pro_Racer",
+        "asset": "SM_Gen_Env_Hill_01",
+        "assetId": 12902
+      },
+      {
+        "ref": "POLYGON_Pro_Racer/SM_Gen_Env_Hill_02",
+        "pack": "POLYGON_Pro_Racer",
+        "asset": "SM_Gen_Env_Hill_02",
+        "assetId": 12903
+      },
+      {
+        "ref": "POLYGON_Pro_Racer/SM_Gen_Env_Hill_03",
+        "pack": "POLYGON_Pro_Racer",
+        "asset": "SM_Gen_Env_Hill_03",
+        "assetId": 12904
+      },
+      {
+        "ref": "POLYGON_NatureBiomes_MeadowForest/SM_Env_Background_Hill_01",
+        "pack": "POLYGON_NatureBiomes_MeadowForest",
+        "asset": "SM_Env_Background_Hill_01",
+        "assetId": 15221
+      }
+    ]
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "centre",
+  "bounds": {
+    "min": [
+      -9000,
+      -9000,
+      -9000
+    ],
+    "max": [
+      9000,
+      9000,
+      9000
+    ],
+    "size": [
+      18000,
+      18000,
+      18000
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        18000,
+        18000,
+        18000
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "skydome": {
+    "radius": 9000,
+    "colors": {
+      "zenith": "#4785d2",
+      "horizon": "#d2e6f0",
+      "ground": "#6e8e45",
+      "ring": "#4f6b3c"
+    },
+    "dome": "dome",
+    "ring": {
+      "node": "ring",
+      "props": 78,
+      "triangles": 20016
+    },
+    "panorama": {
+      "file": "sky-country_panorama.png",
+      "width": 2048,
+      "height": 1024
+    }
+  },
+  "compress": "meshopt"
+}

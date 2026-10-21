@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "bg-range-a",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Gen_Env_Background_Mountain_01",
+    "assetId": 12814
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -47.5546,
+      0,
+      -5.2932
+    ],
+    "max": [
+      47.5546,
+      39.7332,
+      5.2932
+    ],
+    "size": [
+      95.1092,
+      39.7332,
+      10.5864
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        19.8666,
+        0
+      ],
+      "size": [
+        95.1092,
+        39.7332,
+        10.5864
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

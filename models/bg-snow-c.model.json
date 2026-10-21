@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "bg-snow-c",
+  "source": {
+    "pack": "POLYGON_BattleRoyale",
+    "asset": "SM_Generic_Mountains_Snow_01",
+    "assetId": 2377
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -10.386,
+      0,
+      -10.0486
+    ],
+    "max": [
+      10.386,
+      10.3109,
+      10.0486
+    ],
+    "size": [
+      20.772,
+      10.3109,
+      20.0972
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        5.1555,
+        0
+      ],
+      "size": [
+        20.772,
+        10.3109,
+        20.0972
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

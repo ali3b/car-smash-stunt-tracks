@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "name": "sky-alpine",
+  "source": {
+    "kind": "skydome",
+    "preset": "alpine",
+    "ring": [
+      {
+        "ref": "POLYGON_NatureBiomes_AlpineMountain/SM_Env_MountainRange_01",
+        "pack": "POLYGON_NatureBiomes_AlpineMountain",
+        "asset": "SM_Env_MountainRange_01",
+        "assetId": 14614
+      },
+      {
+        "ref": "POLYGON_NatureBiomes_AlpineMountain/SM_Env_MountainRange_02",
+        "pack": "POLYGON_NatureBiomes_AlpineMountain",
+        "asset": "SM_Env_MountainRange_02",
+        "assetId": 14615
+      },
+      {
+        "ref": "POLYGON_NatureBiomes_AlpineMountain/SM_Env_MountainRange_03",
+        "pack": "POLYGON_NatureBiomes_AlpineMountain",
+        "asset": "SM_Env_MountainRange_03",
+        "assetId": 14616
+      },
+      {
+        "ref": "POLYGON_NatureBiomes_AlpineMountain/SM_Env_MountainRange_04",
+        "pack": "POLYGON_NatureBiomes_AlpineMountain",
+        "asset": "SM_Env_MountainRange_04",
+        "assetId": 14617
+      }
+    ]
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "centre",
+  "bounds": {
+    "min": [
+      -9000,
+      -9000,
+      -9000
+    ],
+    "max": [
+      9000,
+      9000,
+      9000
+    ],
+    "size": [
+      18000,
+      18000,
+      18000
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        18000,
+        18000,
+        18000
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "skydome": {
+    "radius": 9000,
+    "colors": {
+      "zenith": "#3567b3",
+      "horizon": "#dfe9f2",
+      "ground": "#e6ecf0",
+      "ring": "#8d98a8"
+    },
+    "dome": "dome",
+    "ring": {
+      "node": "ring",
+      "props": 65,
+      "triangles": 38925
+    },
+    "panorama": {
+      "file": "sky-alpine_panorama.png",
+      "width": 2048,
+      "height": 1024
+    }
+  },
+  "compress": "meshopt"
+}

@@ -1,0 +1,768 @@
+{
+  "version": 1,
+  "name": "car-sr-muscle",
+  "source": {
+    "pack": "POLYGON_Street_Racer",
+    "asset": "SK_Veh_Preset_Muscle_01",
+    "assetId": 16339
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "axle-centre",
+  "bounds": {
+    "min": [
+      -0.9203,
+      -0.3003,
+      -2.6079
+    ],
+    "max": [
+      0.9203,
+      0.9781,
+      2.2921
+    ],
+    "size": [
+      1.8406,
+      1.2784,
+      4.9
+    ]
+  },
+  "parts": [
+    {
+      "node": "SK_Veh_Muscle_01_Badge_08",
+      "role": null,
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Badge_09",
+      "role": null,
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Bonnet_01",
+      "role": "lid",
+      "pivot": [
+        0,
+        0.613,
+        0.847
+      ],
+      "hinge": {
+        "pos": [
+          0,
+          0.613,
+          0.847
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SK_Veh_Muscle_01_BoostGauge_03",
+      "role": "gauge",
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_BoostGauge_Needle",
+      "role": "needle",
+      "pivot": [
+        0.388,
+        0.6229,
+        0.4492
+      ],
+      "axis": [
+        0,
+        -0.3658,
+        0.9307
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Boot",
+      "role": "lid",
+      "pivot": [
+        -0.0009,
+        0.6374,
+        -1.873
+      ],
+      "hinge": {
+        "pos": [
+          -0.0009,
+          0.6374,
+          -1.873
+        ],
+        "axis": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Door_L_Glass_1",
+      "role": "door",
+      "pivot": [
+        0.642,
+        0.8296,
+        -0.2687
+      ],
+      "hinge": {
+        "pos": [
+          0.642,
+          0.8296,
+          -0.2687
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Door_L_Glass_2",
+      "role": "door",
+      "pivot": [
+        0.7494,
+        0.4591,
+        0.7475
+      ],
+      "hinge": {
+        "pos": [
+          0.7494,
+          0.4591,
+          0.7475
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Door_L",
+      "role": "door",
+      "pivot": [
+        0.8886,
+        0.3437,
+        0.7476
+      ],
+      "hinge": {
+        "pos": [
+          0.8886,
+          0.3437,
+          0.7476
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Door_R_Glass_1",
+      "role": "door",
+      "pivot": [
+        -0.642,
+        0.8296,
+        -0.2687
+      ],
+      "hinge": {
+        "pos": [
+          -0.642,
+          0.8296,
+          -0.2687
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Door_R_Glass_2",
+      "role": "door",
+      "pivot": [
+        -0.7494,
+        0.4591,
+        0.7475
+      ],
+      "hinge": {
+        "pos": [
+          -0.7494,
+          0.4591,
+          0.7475
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Door_R",
+      "role": "door",
+      "pivot": [
+        -0.8886,
+        0.3437,
+        0.7476
+      ],
+      "hinge": {
+        "pos": [
+          -0.8886,
+          0.3437,
+          0.7476
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Engine_01",
+      "role": null,
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Exhaust_01",
+      "role": null,
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Front_Bumper_01",
+      "role": null,
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Gear_Stick_01",
+      "role": "lever",
+      "pivot": [
+        0.0012,
+        0.2767,
+        0.2772
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Handbrake_06",
+      "role": "lever",
+      "pivot": [
+        0,
+        0.242,
+        -0.179
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Handbrake_Slot_02",
+      "role": "lever",
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_HeadUnit_04",
+      "role": null,
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Mirror_03",
+      "role": null,
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Number_Plate_09",
+      "role": "static",
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Number_Plate_10",
+      "role": "static",
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Pedal_Long_04",
+      "role": null,
+      "pivot": [
+        0.3238,
+        0.1842,
+        0.7434
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Pedal_Short_04",
+      "role": null,
+      "pivot": [
+        0.5457,
+        0.1842,
+        0.7434
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Rear_Bumper_01",
+      "role": null,
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Roof_03_Glass",
+      "role": "static",
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Roof_03",
+      "role": null,
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Seats_01",
+      "role": "static",
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Speedometer_02",
+      "role": "gauge",
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Speedometer_03",
+      "role": "gauge",
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Speedometer_Needle_01",
+      "role": "needle",
+      "pivot": [
+        0.3168,
+        0.6123,
+        0.4462
+      ],
+      "axis": [
+        0,
+        -0.3407,
+        0.9402
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Speedometer_Needle_02",
+      "role": "needle",
+      "pivot": [
+        0.4596,
+        0.6123,
+        0.4462
+      ],
+      "axis": [
+        0,
+        -0.3407,
+        0.9402
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_SteeringW",
+      "role": "steering",
+      "pivot": [
+        0.388,
+        0.5731,
+        0.2421
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Undercarriage_01",
+      "role": null,
+      "pivot": [
+        0,
+        -0.2945,
+        -0.1106
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Wheel_fl",
+      "role": "wheel",
+      "pivot": [
+        0.7289,
+        0,
+        1.3802
+      ],
+      "radius": 0.3003,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Wheel_fr",
+      "role": "wheel",
+      "pivot": [
+        -0.7289,
+        0,
+        1.3802
+      ],
+      "radius": 0.3003,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Wheel_rl",
+      "role": "wheel",
+      "pivot": [
+        0.7289,
+        0,
+        -1.3802
+      ],
+      "radius": 0.3003,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Wheel_rr",
+      "role": "wheel",
+      "pivot": [
+        -0.7289,
+        0,
+        -1.3802
+      ],
+      "radius": 0.3003,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Wiper_02_Blade",
+      "role": "blade",
+      "pivot": [
+        0.3226,
+        0.6585,
+        0.7174
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Wiper_02",
+      "role": null,
+      "pivot": [
+        0.0004,
+        0.643,
+        0.792
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Wiper_03_Blade",
+      "role": "blade",
+      "pivot": [
+        -0.139,
+        0.6573,
+        0.7433
+      ]
+    },
+    {
+      "node": "SK_Veh_Muscle_01_Wiper_03",
+      "role": null,
+      "pivot": [
+        -0.4687,
+        0.6316,
+        0.7548
+      ]
+    }
+  ],
+  "wheels": {
+    "fl": {
+      "node": "SK_Veh_Muscle_01_Wheel_fl",
+      "radius": 0.3003,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": true,
+      "pos": [
+        0.7289,
+        0,
+        1.3802
+      ]
+    },
+    "fr": {
+      "node": "SK_Veh_Muscle_01_Wheel_fr",
+      "radius": 0.3003,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": true,
+      "pos": [
+        -0.7289,
+        0,
+        1.3802
+      ]
+    },
+    "rl": {
+      "node": "SK_Veh_Muscle_01_Wheel_rl",
+      "radius": 0.3003,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": false,
+      "pos": [
+        0.7289,
+        0,
+        -1.3802
+      ]
+    },
+    "rr": {
+      "node": "SK_Veh_Muscle_01_Wheel_rr",
+      "radius": 0.3003,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": false,
+      "pos": [
+        -0.7289,
+        0,
+        -1.3802
+      ]
+    }
+  },
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        0.3389,
+        -0.1579
+      ],
+      "size": [
+        1.8406,
+        1.2784,
+        4.9
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 0.841133,
+    "fit": {
+      "length": 4.9
+    }
+  },
+  "variants": [
+    {
+      "name": "red",
+      "tint": "#c62828"
+    },
+    {
+      "name": "blue",
+      "tint": "#1e5aa8"
+    },
+    {
+      "name": "yellow",
+      "tint": "#f2b705"
+    },
+    {
+      "name": "green",
+      "tint": "#2e7d32"
+    },
+    {
+      "name": "white",
+      "tint": "#e8e8e8"
+    },
+    {
+      "name": "black",
+      "tint": "#202024"
+    },
+    {
+      "name": "orange",
+      "tint": "#ef6c00"
+    },
+    {
+      "name": "purple",
+      "tint": "#6a1b9a"
+    }
+  ],
+  "compress": "meshopt",
+  "dashboard": {
+    "gauges": [
+      {
+        "node": "SK_Veh_Muscle_01_BoostGauge_03",
+        "center": [
+          0.388,
+          0.618,
+          0.4609
+        ],
+        "normal": [
+          0,
+          0.3658,
+          -0.9307
+        ],
+        "radius": 0.0311,
+        "needle": {
+          "node": "SK_Veh_Muscle_01_BoostGauge_Needle",
+          "pivot": [
+            0.388,
+            0.6229,
+            0.4492
+          ],
+          "axis": [
+            0,
+            -0.3658,
+            0.9307
+          ],
+          "rest": [
+            -0.0529,
+            0.9294,
+            0.3653
+          ],
+          "length": 0.018
+        }
+      },
+      {
+        "node": "SK_Veh_Muscle_01_Speedometer_02",
+        "center": [
+          0.4596,
+          0.6111,
+          0.4492
+        ],
+        "normal": [
+          0,
+          0.3407,
+          -0.9402
+        ],
+        "radius": 0.0451,
+        "needle": {
+          "node": "SK_Veh_Muscle_01_Speedometer_Needle_02",
+          "pivot": [
+            0.4596,
+            0.6123,
+            0.4462
+          ],
+          "axis": [
+            0,
+            -0.3407,
+            0.9402
+          ],
+          "rest": [
+            0.9984,
+            0.0528,
+            0.0192
+          ],
+          "length": 0.0288
+        }
+      },
+      {
+        "node": "SK_Veh_Muscle_01_Speedometer_03",
+        "center": [
+          0.3167,
+          0.6111,
+          0.4492
+        ],
+        "normal": [
+          0,
+          0.3407,
+          -0.9402
+        ],
+        "radius": 0.0451,
+        "needle": {
+          "node": "SK_Veh_Muscle_01_Speedometer_Needle_01",
+          "pivot": [
+            0.3168,
+            0.6123,
+            0.4462
+          ],
+          "axis": [
+            0,
+            -0.3407,
+            0.9402
+          ],
+          "rest": [
+            0.9984,
+            0.0529,
+            0.0192
+          ],
+          "length": 0.0287
+        }
+      }
+    ]
+  }
+}

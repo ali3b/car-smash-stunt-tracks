@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "bg-clouds",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Gen_Env_Cloud_Ring_01",
+    "assetId": 12841
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -171.9618,
+      0,
+      -160.7822
+    ],
+    "max": [
+      171.9618,
+      30.2881,
+      160.7822
+    ],
+    "size": [
+      343.9236,
+      30.2881,
+      321.5644
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        15.1441,
+        0
+      ],
+      "size": [
+        343.9236,
+        30.2881,
+        321.5644
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

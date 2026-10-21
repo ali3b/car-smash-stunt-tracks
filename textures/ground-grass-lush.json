@@ -1,0 +1,17 @@
+{
+  "name": "Grass_02",
+  "source": {
+    "pack": "POLYGON_Palm_City",
+    "path": "POLYGON_Palm_City_v3/SourceFiles/Textures/Terrain/Grass_02.png"
+  },
+  "width": 512,
+  "height": 512,
+  "background": "opaque",
+  "frames": null,
+  "format": "png",
+  "sourceSize": [
+    2048,
+    2048
+  ],
+  "image": "ground-grass-lush.png"
+}

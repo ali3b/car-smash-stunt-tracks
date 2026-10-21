@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "sc-tennis",
+  "source": {
+    "pack": "POLYGON_Palm_City",
+    "asset": "SM_Env_Court_Tennis_01",
+    "assetId": 2941
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -9.6,
+      0,
+      -16
+    ],
+    "max": [
+      9.6,
+      0,
+      16
+    ],
+    "size": [
+      19.2,
+      0,
+      32
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        19.2,
+        0,
+        32
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 2.56,
+    "fit": {
+      "length": 32
+    }
+  },
+  "compress": "meshopt"
+}

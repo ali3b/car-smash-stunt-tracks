@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "name": "sc-windpump",
+  "source": {
+    "pack": "POLYGON_Farm",
+    "asset": "SM_Prop_Windmill_01",
+    "assetId": 15926
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -2.4607,
+      0,
+      -3.1536
+    ],
+    "max": [
+      2.4607,
+      15,
+      3.1536
+    ],
+    "size": [
+      4.9214,
+      15,
+      6.3072
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Prop_Windmill_Blades_01",
+      "role": "blade",
+      "pivot": [
+        0.0257,
+        0.0653,
+        1.4864
+      ]
+    },
+    {
+      "node": "SM_Prop_Windmill_Top_01",
+      "role": null,
+      "pivot": [
+        0.0257,
+        0.0653,
+        1.4864
+      ]
+    }
+  ],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        7.5,
+        0
+      ],
+      "size": [
+        4.9214,
+        15,
+        6.3072
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.306561,
+    "fit": {
+      "height": 15
+    }
+  },
+  "compress": "meshopt"
+}

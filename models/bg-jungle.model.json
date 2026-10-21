@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "bg-jungle",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Env_Tree_Group_03",
+    "assetId": 13312
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -6.4009,
+      0,
+      -5.9468
+    ],
+    "max": [
+      6.4009,
+      6.5426,
+      5.9468
+    ],
+    "size": [
+      12.8018,
+      6.5426,
+      11.8936
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        3.2713,
+        0
+      ],
+      "size": [
+        12.8018,
+        6.5426,
+        11.8936
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

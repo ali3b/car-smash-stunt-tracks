@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "ts-slalom",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Prop_Barrier_Tyres_01",
+    "assetId": 13362
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -2.25,
+      0,
+      -0.6612
+    ],
+    "max": [
+      2.25,
+      2.2645,
+      0.6612
+    ],
+    "size": [
+      4.5,
+      2.2645,
+      1.3224
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        1.1323,
+        0
+      ],
+      "size": [
+        4.5,
+        2.2645,
+        1.3224
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.270612,
+    "fit": {
+      "width": 4.5
+    }
+  },
+  "compress": "meshopt"
+}

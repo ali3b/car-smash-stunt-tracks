@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "textures": {
+    "ground-sand": {
+      "rev": "763bd9b3407d8463",
+      "texture": "POLYGON_Pro_Racer_v3/SourceFiles/Textures/ProRacer/Ground/Beach_01.png",
+      "image": "ground-sand.png",
+      "meta": "ground-sand.json",
+      "data": {
+        "name": "Beach_01",
+        "source": {
+          "pack": "POLYGON_Pro_Racer",
+          "path": "POLYGON_Pro_Racer_v3/SourceFiles/Textures/ProRacer/Ground/Beach_01.png"
+        },
+        "width": 512,
+        "height": 512,
+        "background": "opaque",
+        "frames": null,
+        "format": "png",
+        "sourceSize": [
+          2048,
+          2048
+        ]
+      }
+    },
+    "ground-arid": {
+      "rev": "8b1a9856f06ec406",
+      "texture": "POLYGON_NatureBiomes_AridDesert_v3/Textures/Dirt_Texture_Arid_01.png",
+      "image": "ground-arid.png",
+      "meta": "ground-arid.json",
+      "data": {
+        "name": "Dirt_Texture_Arid_01",
+        "source": {
+          "pack": "POLYGON_NatureBiomes_AridDesert",
+          "path": "POLYGON_NatureBiomes_AridDesert_v3/Textures/Dirt_Texture_Arid_01.png"
+        },
+        "width": 512,
+        "height": 512,
+        "background": "opaque",
+        "frames": null,
+        "format": "png",
+        "sourceSize": [
+          2048,
+          2048
+        ]
+      }
+    },
+    "ground-grass": {
+      "rev": "7fb5e67c97c21795",
+      "texture": "POLYGON_Palm_City_v3/SourceFiles/Textures/Terrain/Grass_01.png",
+      "image": "ground-grass.png",
+      "meta": "ground-grass.json",
+      "data": {
+        "name": "Grass_01",
+        "source": {
+          "pack": "POLYGON_Palm_City",
+          "path": "POLYGON_Palm_City_v3/SourceFiles/Textures/Terrain/Grass_01.png"
+        },
+        "width": 512,
+        "height": 512,
+        "background": "opaque",
+        "frames": null,
+        "format": "png",
+        "sourceSize": [
+          2048,
+          2048
+        ]
+      }
+    },
+    "ground-grass-lush": {
+      "rev": "cc34520310861d9c",
+      "texture": "POLYGON_Palm_City_v3/SourceFiles/Textures/Terrain/Grass_02.png",
+      "image": "ground-grass-lush.png",
+      "meta": "ground-grass-lush.json",
+      "data": {
+        "name": "Grass_02",
+        "source": {
+          "pack": "POLYGON_Palm_City",
+          "path": "POLYGON_Palm_City_v3/SourceFiles/Textures/Terrain/Grass_02.png"
+        },
+        "width": 512,
+        "height": 512,
+        "background": "opaque",
+        "frames": null,
+        "format": "png",
+        "sourceSize": [
+          2048,
+          2048
+        ]
+      }
+    },
+    "ground-generic-grass": {
+      "rev": "0a0454d10b10b65d",
+      "texture": "POLYGON_Generic_v3/Textures/Generic_Grass.png",
+      "image": "ground-generic-grass.png",
+      "meta": "ground-generic-grass.json",
+      "data": {
+        "name": "Generic_Grass",
+        "source": {
+          "pack": "POLYGON_Generic",
+          "path": "POLYGON_Generic_v3/Textures/Generic_Grass.png"
+        },
+        "width": 512,
+        "height": 512,
+        "background": "opaque",
+        "frames": null,
+        "format": "png",
+        "sourceSize": [
+          2048,
+          2048
+        ]
+      }
+    },
+    "ground-snow": {
+      "rev": "bc783f87eef92e84",
+      "texture": "POLYGON_NatureBiomes_AlpineMountain_v3/Textures/Snow_01.png",
+      "image": "ground-snow.png",
+      "meta": "ground-snow.json",
+      "data": {
+        "name": "Snow_01",
+        "source": {
+          "pack": "POLYGON_NatureBiomes_AlpineMountain",
+          "path": "POLYGON_NatureBiomes_AlpineMountain_v3/Textures/Snow_01.png"
+        },
+        "width": 512,
+        "height": 512,
+        "background": "opaque",
+        "frames": null,
+        "format": "png",
+        "sourceSize": [
+          2048,
+          2048
+        ]
+      }
+    }
+  }
+}

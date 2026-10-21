@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "name": "driver-e",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Chr_PitCrew_01",
+    "assetId": 15405
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -0.3739,
+      0,
+      -0.1971
+    ],
+    "max": [
+      0.3739,
+      1.7936,
+      0.1971
+    ],
+    "size": [
+      0.7478,
+      1.7936,
+      0.3942
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        0.8968,
+        0
+      ],
+      "size": [
+        0.7478,
+        1.7936,
+        0.3942
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt",
+  "poses": [
+    {
+      "name": "driver-e",
+      "node": "driver-e",
+      "clip": "POLY_IDL_Base@Masculine",
+      "time": 0,
+      "source": {
+        "id": 174,
+        "pack": "ANIMATION_Idles",
+        "name": "POLY_IDL_Base",
+        "variant": "Masculine",
+        "set": "Polygon"
+      },
+      "bounds": {
+        "min": [
+          -0.3739,
+          0,
+          -0.1971
+        ],
+        "max": [
+          0.3739,
+          1.7936,
+          0.1971
+        ],
+        "size": [
+          0.7478,
+          1.7936,
+          0.3942
+        ]
+      }
+    }
+  ]
+}

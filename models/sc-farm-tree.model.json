@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "name": "sc-farm-tree",
+  "source": {
+    "pack": "POLYGON_Farm",
+    "asset": "SM_Env_Tree_Large_01",
+    "assetId": 15532
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -8.9186,
+      0,
+      -6.5356
+    ],
+    "max": [
+      8.9186,
+      16,
+      6.5356
+    ],
+    "size": [
+      17.8372,
+      16,
+      13.0712
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Env_Tree_Large_Swing_01",
+      "role": null,
+      "pivot": [
+        -1.9863,
+        0.8089,
+        1.8614
+      ]
+    }
+  ],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        8,
+        0
+      ],
+      "size": [
+        17.8372,
+        16,
+        13.0712
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.24634,
+    "fit": {
+      "height": 16
+    }
+  },
+  "compress": "meshopt"
+}

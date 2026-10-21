@@ -1,0 +1,359 @@
+{
+  "version": 1,
+  "name": "car-touring",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Veh_Touring_01",
+    "assetId": 12690
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "axle-centre",
+  "bounds": {
+    "min": [
+      -0.9767,
+      -0.3287,
+      -2.3055
+    ],
+    "max": [
+      0.9758,
+      0.9749,
+      2.1945
+    ],
+    "size": [
+      1.9525,
+      1.3036,
+      4.5
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Veh_Touring_01_Door_L_01_Glass_01",
+      "role": "door",
+      "pivot": [
+        0.7842,
+        0.3411,
+        0.7366
+      ],
+      "hinge": {
+        "pos": [
+          0.7842,
+          0.3411,
+          0.7366
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Touring_01_Door_L_01",
+      "role": "door",
+      "pivot": [
+        0.7842,
+        0.3411,
+        0.7366
+      ],
+      "hinge": {
+        "pos": [
+          0.7842,
+          0.3411,
+          0.7366
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Touring_01_Door_R_01_Glass_01",
+      "role": "door",
+      "pivot": [
+        -0.7852,
+        0.3411,
+        0.7366
+      ],
+      "hinge": {
+        "pos": [
+          -0.7852,
+          0.3411,
+          0.7366
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Touring_01_Door_R_01",
+      "role": "door",
+      "pivot": [
+        -0.7852,
+        0.3411,
+        0.7366
+      ],
+      "hinge": {
+        "pos": [
+          -0.7852,
+          0.3411,
+          0.7366
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Touring_01_Engine_01",
+      "role": null,
+      "pivot": [
+        -0.0005,
+        -0.322,
+        -0.0281
+      ]
+    },
+    {
+      "node": "SM_Veh_Touring_01_Glass_01",
+      "role": "static",
+      "pivot": [
+        -0.0005,
+        -0.322,
+        -0.0281
+      ]
+    },
+    {
+      "node": "SM_Veh_Touring_01_RollCage_01",
+      "role": null,
+      "pivot": [
+        -0.0005,
+        -0.322,
+        -0.0281
+      ]
+    },
+    {
+      "node": "SM_Veh_Touring_01_Roof_Scoop_01",
+      "role": null,
+      "pivot": [
+        -0.0005,
+        -0.322,
+        -0.0281
+      ]
+    },
+    {
+      "node": "SM_Veh_Touring_01_Seat_01",
+      "role": "static",
+      "pivot": [
+        -0.0005,
+        -0.322,
+        -0.0281
+      ]
+    },
+    {
+      "node": "SM_Veh_Touring_01_SteeringWheel_02",
+      "role": "steering",
+      "pivot": [
+        3.6556,
+        -0.1391,
+        -0.5389
+      ]
+    },
+    {
+      "node": "SM_Veh_Touring_01_Wheel_FL_01",
+      "role": "wheel",
+      "pivot": [
+        0.8227,
+        0,
+        1.3206
+      ],
+      "radius": 0.3287,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Touring_01_Wheel_FR_01",
+      "role": "wheel",
+      "pivot": [
+        -0.8212,
+        0,
+        1.3172
+      ],
+      "radius": 0.3287,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Touring_01_Wheel_RL_01",
+      "role": "wheel",
+      "pivot": [
+        0.8227,
+        0,
+        -1.3213
+      ],
+      "radius": 0.3287,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Touring_01_Wheel_RR_01",
+      "role": "wheel",
+      "pivot": [
+        -0.8242,
+        0,
+        -1.3165
+      ],
+      "radius": 0.3287,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Touring_01_Windscreen_Sticker_01",
+      "role": "static",
+      "pivot": [
+        -0.0005,
+        -0.322,
+        -0.0281
+      ]
+    }
+  ],
+  "wheels": {
+    "fl": {
+      "node": "SM_Veh_Touring_01_Wheel_FL_01",
+      "radius": 0.3287,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": true,
+      "pos": [
+        0.8227,
+        0,
+        1.3206
+      ]
+    },
+    "fr": {
+      "node": "SM_Veh_Touring_01_Wheel_FR_01",
+      "radius": 0.3287,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": true,
+      "pos": [
+        -0.8212,
+        0,
+        1.3172
+      ]
+    },
+    "rl": {
+      "node": "SM_Veh_Touring_01_Wheel_RL_01",
+      "radius": 0.3287,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": false,
+      "pos": [
+        0.8227,
+        0,
+        -1.3213
+      ]
+    },
+    "rr": {
+      "node": "SM_Veh_Touring_01_Wheel_RR_01",
+      "radius": 0.3287,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": false,
+      "pos": [
+        -0.8242,
+        0,
+        -1.3165
+      ]
+    }
+  },
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        -0.0005,
+        0.3231,
+        -0.0555
+      ],
+      "size": [
+        1.9525,
+        1.3036,
+        4.5
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 0.917642,
+    "fit": {
+      "length": 4.5
+    }
+  },
+  "variants": [
+    {
+      "name": "red",
+      "tint": "#c62828"
+    },
+    {
+      "name": "blue",
+      "tint": "#1e5aa8"
+    },
+    {
+      "name": "yellow",
+      "tint": "#f2b705"
+    },
+    {
+      "name": "green",
+      "tint": "#2e7d32"
+    },
+    {
+      "name": "white",
+      "tint": "#e8e8e8"
+    },
+    {
+      "name": "black",
+      "tint": "#202024"
+    },
+    {
+      "name": "orange",
+      "tint": "#ef6c00"
+    },
+    {
+      "name": "purple",
+      "tint": "#6a1b9a"
+    }
+  ],
+  "compress": "meshopt"
+}

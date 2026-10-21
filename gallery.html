@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Smash Stunt Tracks: gallery</title>
+    <meta name="description" content="Car Smash Stunt Tracks, a 3D stunt-track racer in the browser: the trailer, the making-of and screenshots." />
+    <link rel="icon" href="data:," />
+    <style>
+      @font-face { font-family: 'Press Start 2P'; src: url('fonts/press-start-2p-latin-400-normal.woff2') format('woff2'); font-display: swap; }
+      :root { --ink: #0b0e1c; --panel: #141a33; --line: #2c3566; --text: #e8e6f0; --muted: #a9a6bd; --yellow: #ffd23c; --orange: #ff5a1f; --pink: #ff3d8b; --cyan: #33d6ff; }
+      * { box-sizing: border-box; }
+      html { background: var(--ink); }
+      body { margin: 0; color: var(--text); font: 12px/1.9 'Press Start 2P', monospace; background: var(--ink); }
+      a { color: var(--yellow); }
+      .banner { padding: 28px 16px 22px; text-align: center; border-bottom: 4px solid #000;
+        background: linear-gradient(180deg, #1a2350, var(--ink)); }
+      .banner h1 { margin: 0; font-size: clamp(22px, 6vw, 48px); font-weight: normal; letter-spacing: 3px; color: var(--yellow); transform: skewX(-10deg);
+        text-shadow: 3px 3px 0 var(--orange), 6px 6px 0 rgba(0,0,0,.6); }
+      .banner h1 span { color: #fff; text-shadow: 3px 3px 0 var(--pink), 6px 6px 0 rgba(0,0,0,.6); }
+      .banner .sub { display: inline-block; margin-top: 16px; padding: 6px 18px; color: var(--ink); background: var(--cyan); transform: skewX(-14deg); letter-spacing: 6px; }
+      .chq { height: 12px; background: repeating-conic-gradient(#111 0 25%, #f4f1ea 0 50%) 0 0 / 12px 12px; }
+      main { max-width: 1240px; margin: 0 auto; padding: 24px 16px 48px; }
+      .panel { background: var(--panel); border: 3px solid #000; box-shadow: inset 0 0 0 2px var(--line), 6px 6px 0 #000; padding: 16px; margin: 0 0 28px; }
+      .panel h2 { margin: 0 0 12px; font-size: 14px; font-weight: normal; color: var(--cyan); }
+      .play { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+      .btn { display: inline-block; padding: 12px 18px; background: var(--orange); color: #fff; text-decoration: none; border: 3px solid #000; box-shadow: 4px 4px 0 #000; }
+      .btn:hover, .btn:focus-visible { background: #ff7a45; outline: none; }
+      video { display: block; width: 100%; height: auto; background: #000; border: 3px solid #000; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 18px; }
+      figure { margin: 0; background: var(--ink); border: 3px solid #000; box-shadow: 4px 4px 0 #000; }
+      figure a { display: block; }
+      figure img { display: block; width: 100%; height: auto; }
+      figcaption { padding: 8px 10px; font-size: 10px; line-height: 1.8; }
+      figcaption b { color: var(--yellow); font-weight: normal; }
+      footer { font-size: 9px; line-height: 2; color: var(--muted); }
+      @media (max-width: 600px) { body { font-size: 10px; } }
+    </style>
+  </head>
+  <body>
+    <header class="banner"><h1>CAR <span>SMASH</span></h1><div class="sub">STUNT TRACKS</div></header>
+    <div class="chq"></div>
+    <main>
+      <section class="panel play">
+        <div>A 3D stunt-track racer in the browser.<br />Loops, corkscrews, pipes, jumps, rivals, replays and a track editor.</div>
+        <a class="btn" href="./">PLAY NOW</a>
+      </section>
+
+      <section class="panel"><h2>THE TRAILER</h2><video controls preload="metadata" playsinline poster="screenshots/title.jpg"><source src="videos/trailer.mp4" type="video/mp4" /></video></section>
+      <section class="panel"><h2>THE 30-SECOND SHORT</h2><video controls preload="metadata" playsinline><source src="videos/short.mp4" type="video/mp4" /></video></section>
+      <section class="panel"><h2>THE MAKING OF</h2><video controls preload="metadata" playsinline><source src="videos/documentary.mp4" type="video/mp4" /></video></section>
+
+      <section class="panel">
+        <h2>SCREENS</h2>
+        <div class="grid">
+          <figure><a href="screenshots/title.jpg"><img src="screenshots/title.jpg" alt="The title screen over the demo race" loading="lazy" width="1280" height="720" /></a><figcaption>The title screen over the demo race</figcaption></figure>
+          <figure><a href="screenshots/race-chase.jpg"><img src="screenshots/race-chase.jpg" alt="Skyline Stunts against a rival, from the chase cam" loading="lazy" width="1280" height="720" /></a><figcaption><b>Skyline Stunts</b> against a rival, from the chase cam</figcaption></figure>
+          <figure><a href="screenshots/race-incar.jpg"><img src="screenshots/race-incar.jpg" alt="The in-car view with our own dashboard" loading="lazy" width="1280" height="720" /></a><figcaption>The in-car view with our own dashboard</figcaption></figure>
+          <figure><a href="screenshots/loop.jpg"><img src="screenshots/loop.jpg" alt="Upside down on the loop at Lagoon Leap" loading="lazy" width="1280" height="720" /></a><figcaption>Upside down on the loop at <b>Lagoon Leap</b></figcaption></figure>
+          <figure><a href="screenshots/track-select.jpg"><img src="screenshots/track-select.jpg" alt="Choosing a track: map, stunts and best times" loading="lazy" width="1280" height="720" /></a><figcaption>Choosing a track: map, stunts and best times</figcaption></figure>
+          <figure><a href="screenshots/editor.jpg"><img src="screenshots/editor.jpg" alt="The track editor: a 30 × 30 grid, live 3D preview and a circuit check" loading="lazy" width="1280" height="720" /></a><figcaption>The track editor: a 30 × 30 grid, live 3D preview and a circuit check</figcaption></figure>
+          <figure><a href="screenshots/dos-look.jpg"><img src="screenshots/dos-look.jpg" alt="F2: the DOS look, 256 colours" loading="lazy" width="1280" height="720" /></a><figcaption>F2: the DOS look, 256 colours</figcaption></figure>
+          <figure><a href="screenshots/mobile-race.jpg"><img src="screenshots/mobile-race.jpg" alt="On a phone: pedals, steering (or tilt), camera and pause on screen" loading="lazy" width="1280" height="720" /></a><figcaption>On a phone: pedals, steering (or tilt), camera and pause on screen</figcaption></figure>
+        </div>
+      </section>
+
+      <footer class="panel">
+        Built with three.js. 3D assets: Synty Studios POLYGON packs (licensed), exported through the Synty Sprite
+        Generator; they are not covered by the code licence and may not be extracted. Tracks, cars' tunings, music and
+        sound are our own; the music and sound are synthesised in the browser. Font: Press Start 2P (SIL OFL).
+        Keyboard, gamepad or touch.
+      </footer>
+    </main>
+  </body>
+</html>

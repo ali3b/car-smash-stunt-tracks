@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "sc-office-b",
+  "source": {
+    "pack": "POLYGON_City",
+    "asset": "SM_Bld_OfficeOld_Large_02",
+    "assetId": 84
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -10.8302,
+      0,
+      -10.855
+    ],
+    "max": [
+      10.8302,
+      34,
+      10.855
+    ],
+    "size": [
+      21.6604,
+      34,
+      21.71
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        17,
+        0
+      ],
+      "size": [
+        21.6604,
+        34,
+        21.71
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.346484,
+    "fit": {
+      "height": 34
+    }
+  },
+  "compress": "meshopt"
+}

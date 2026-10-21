@@ -1,0 +1,17 @@
+{
+  "name": "Snow_01",
+  "source": {
+    "pack": "POLYGON_NatureBiomes_AlpineMountain",
+    "path": "POLYGON_NatureBiomes_AlpineMountain_v3/Textures/Snow_01.png"
+  },
+  "width": 512,
+  "height": 512,
+  "background": "opaque",
+  "frames": null,
+  "format": "png",
+  "sourceSize": [
+    2048,
+    2048
+  ],
+  "image": "ground-snow.png"
+}

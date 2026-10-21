@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "name": "sc-boat",
+  "source": {
+    "pack": "POLYGON_Palm_City",
+    "asset": "SM_Veh_Power_Boat_01",
+    "assetId": 2511
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -2.1158,
+      0,
+      -7
+    ],
+    "max": [
+      2.1158,
+      4.9099,
+      7
+    ],
+    "size": [
+      4.2316,
+      4.9099,
+      14
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Veh_Power_Boat_01_Roof_Glass",
+      "role": "static",
+      "pivot": [
+        0,
+        0.5752,
+        -0.2187
+      ]
+    },
+    {
+      "node": "SM_Veh_Power_Boat_01_Roof",
+      "role": null,
+      "pivot": [
+        0,
+        0.5752,
+        -0.2187
+      ]
+    },
+    {
+      "node": "SM_Veh_Power_Boat_01_Steering_Wheel",
+      "role": "steering",
+      "pivot": [
+        -0.0019,
+        -0.0358,
+        -2.0768
+      ]
+    }
+  ],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        2.455,
+        0
+      ],
+      "size": [
+        4.2316,
+        4.9099,
+        14
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.377448,
+    "fit": {
+      "length": 14
+    }
+  },
+  "compress": "meshopt"
+}

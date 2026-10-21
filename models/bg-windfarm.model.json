@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "name": "bg-windfarm",
+  "source": {
+    "pack": "POLYGON_Farm",
+    "asset": "SM_Prop_Windfarm_01",
+    "assetId": 15924
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -19.4271,
+      0,
+      -4.9326
+    ],
+    "max": [
+      19.4271,
+      87.0878,
+      4.9326
+    ],
+    "size": [
+      38.8542,
+      87.0878,
+      9.8652
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Prop_Windfarm_Blades_01",
+      "role": "blade",
+      "pivot": [
+        0.329,
+        0.6207,
+        0.6719
+      ]
+    }
+  ],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        43.5439,
+        0
+      ],
+      "size": [
+        38.8542,
+        87.0878,
+        9.8652
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

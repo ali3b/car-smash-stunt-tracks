@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "name": "bg-skyline",
+  "source": {
+    "pack": "POLYGON_Palm_City",
+    "asset": "SM_Env_Skyline_01",
+    "assetId": 3046
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -164.2527,
+      0,
+      -39.4885
+    ],
+    "max": [
+      164.2527,
+      38.7919,
+      39.4885
+    ],
+    "size": [
+      328.5054,
+      38.7919,
+      78.977
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Env_Skyline_02",
+      "role": null,
+      "pivot": [
+        4.0527,
+        0,
+        178.9134
+      ]
+    },
+    {
+      "node": "SM_Env_Skyline_03",
+      "role": null,
+      "pivot": [
+        4.0527,
+        0,
+        178.9134
+      ]
+    },
+    {
+      "node": "SM_Env_Skyline_04",
+      "role": null,
+      "pivot": [
+        4.0527,
+        0,
+        178.9134
+      ]
+    }
+  ],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        19.396,
+        0
+      ],
+      "size": [
+        328.5054,
+        38.7919,
+        78.977
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

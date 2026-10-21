@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "bg-treegroup",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Env_Tree_Group_01",
+    "assetId": 13310
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -6.7125,
+      0,
+      -5.3618
+    ],
+    "max": [
+      6.7125,
+      6.1611,
+      5.3618
+    ],
+    "size": [
+      13.425,
+      6.1611,
+      10.7236
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        3.0806,
+        0
+      ],
+      "size": [
+        13.425,
+        6.1611,
+        10.7236
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

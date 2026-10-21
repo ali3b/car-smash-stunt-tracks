@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "sc-office-lod1",
+  "source": {
+    "pack": "POLYGON_City",
+    "asset": "SM_Bld_OfficeOld_Small_01",
+    "assetId": 88
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -8.3714,
+      0,
+      -8.4312
+    ],
+    "max": [
+      8.3714,
+      38,
+      8.4312
+    ],
+    "size": [
+      16.7428,
+      38,
+      16.8624
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        19,
+        0
+      ],
+      "size": [
+        16.7428,
+        38,
+        16.8624
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.505609,
+    "fit": {
+      "height": 38
+    }
+  },
+  "compress": "meshopt"
+}

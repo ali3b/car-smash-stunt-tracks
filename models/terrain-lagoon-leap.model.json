@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "name": "terrain-lagoon-leap",
+  "source": {
+    "kind": "terrain",
+    "tile": null,
+    "materials": {
+      "ground": {
+        "ref": "POLYGON_NatureBiomes_TropicalJungle/SM_Env_Grass_Short_Clump_01#4f9a3a",
+        "color": "#556b2d",
+        "pack": "POLYGON_NatureBiomes_TropicalJungle",
+        "asset": "SM_Env_Grass_Short_Clump_01",
+        "assetId": 14768,
+        "material": "Grass_01.tga",
+        "texture": "Grass_01",
+        "uv": [
+          0.3375,
+          0.8251
+        ]
+      },
+      "slope": {
+        "ref": "POLYGON_NatureBiomes_TropicalJungle/SM_Env_Rock_Cliff_01",
+        "color": "#96826c",
+        "pack": "POLYGON_NatureBiomes_TropicalJungle",
+        "asset": "SM_Env_Rock_Cliff_01",
+        "assetId": 14792,
+        "material": "PolygonNatureBiomes_Tropical_Texture_01.png",
+        "texture": "PolygonNatureBiomes_Tropical_Texture_01",
+        "uv": [
+          0.0383,
+          0.6688
+        ]
+      },
+      "shore": {
+        "ref": "POLYGON_NatureBiomes_AridDesert/SM_Env_DirtRoad_Straight_01#e0c08a",
+        "color": "#ac9a82",
+        "pack": "POLYGON_NatureBiomes_AridDesert",
+        "asset": "SM_Env_DirtRoad_Straight_01",
+        "assetId": 12454,
+        "material": "PolygonNatureBiomesS2_AridDesert_Texture_01.png",
+        "texture": "PolygonNatureBiomesS2_AridDesert_Texture_01",
+        "uv": [
+          0.0394,
+          0.6499
+        ]
+      },
+      "seabed": {
+        "ref": "POLYGON_NatureBiomes_TropicalJungle/SM_Env_Rock_Flat_01",
+        "color": "#96826c",
+        "pack": "POLYGON_NatureBiomes_TropicalJungle",
+        "asset": "SM_Env_Rock_Flat_01",
+        "assetId": 14795,
+        "material": "PolygonNatureBiomes_Tropical_Texture_01.png",
+        "texture": "PolygonNatureBiomes_Tropical_Texture_01",
+        "uv": [
+          0.0383,
+          0.6692
+        ]
+      },
+      "water": {
+        "ref": "#2fa7b8",
+        "color": "#2fa7b8"
+      },
+      "skirt": {
+        "ref": "POLYGON_NatureBiomes_TropicalJungle/SM_Env_Rock_Cliff_01",
+        "color": "#96826c",
+        "pack": "POLYGON_NatureBiomes_TropicalJungle",
+        "asset": "SM_Env_Rock_Cliff_01",
+        "assetId": 14792,
+        "material": "PolygonNatureBiomes_Tropical_Texture_01.png",
+        "texture": "PolygonNatureBiomes_Tropical_Texture_01",
+        "uv": [
+          0.0383,
+          0.6688
+        ]
+      }
+    }
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "tile",
+  "bounds": {
+    "min": [
+      -31.2115,
+      -1.48,
+      0
+    ],
+    "max": [
+      1841.4785,
+      0.02,
+      1872.69
+    ],
+    "size": [
+      1872.69,
+      1.5,
+      1872.69
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        905.1335,
+        -0.73,
+        936.345
+      ],
+      "size": [
+        1872.69,
+        1.5,
+        1872.69
+      ]
+    },
+    "trimesh": {
+      "node": "collider",
+      "triangles": 7200,
+      "vertices": 3721
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "terrain": {
+    "cell": 62.423,
+    "step": 27.432,
+    "tiles": [
+      30,
+      30
+    ],
+    "gridMin": [
+      -31.2115,
+      0
+    ],
+    "subdiv": 2,
+    "shape": "track",
+    "chunks": [
+      {
+        "node": "terrain_0_0",
+        "tiles": [
+          0,
+          0,
+          10,
+          10
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_1_0",
+        "tiles": [
+          10,
+          0,
+          20,
+          10
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_2_0",
+        "tiles": [
+          20,
+          0,
+          30,
+          10
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_0_1",
+        "tiles": [
+          0,
+          10,
+          10,
+          20
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_1_1",
+        "tiles": [
+          10,
+          10,
+          20,
+          20
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_2_1",
+        "tiles": [
+          20,
+          10,
+          30,
+          20
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_0_2",
+        "tiles": [
+          0,
+          20,
+          10,
+          30
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_1_2",
+        "tiles": [
+          10,
+          20,
+          20,
+          30
+        ],
+        "triangles": 800
+      },
+      {
+        "node": "terrain_2_2",
+        "tiles": [
+          20,
+          20,
+          30,
+          30
+        ],
+        "triangles": 800
+      }
+    ],
+    "water": {
+      "level": 0.02,
+      "nodes": [
+        "water_0_0",
+        "water_1_0",
+        "water_0_1",
+        "water_1_1",
+        "water_2_1",
+        "water_1_2"
+      ],
+      "tiles": 121
+    },
+    "scatter": [
+      {
+        "asset": "SM_Gen_Env_Shrub_01",
+        "pack": "POLYGON_Pro_Racer",
+        "assetId": 12964,
+        "node": "scatter_0",
+        "count": 951
+      },
+      {
+        "asset": "SM_Env_Grass_Bush_01",
+        "pack": "POLYGON_NatureBiomes_MeadowForest",
+        "assetId": 15233,
+        "node": "scatter_1",
+        "count": 487
+      },
+      {
+        "asset": "SM_Generic_Small_Rocks_03",
+        "pack": "POLYGON_Gang_Warfare",
+        "assetId": 1728,
+        "node": "scatter_2",
+        "count": 625
+      }
+    ]
+  },
+  "compress": "meshopt"
+}

@@ -1,0 +1,392 @@
+{
+  "version": 1,
+  "name": "apron-tropical",
+  "source": {
+    "kind": "terrain",
+    "tile": null,
+    "materials": {
+      "ground": {
+        "ref": "POLYGON_NatureBiomes_TropicalJungle/SM_Env_Grass_Short_Clump_01#4f9a3a",
+        "color": "#556b2d",
+        "pack": "POLYGON_NatureBiomes_TropicalJungle",
+        "asset": "SM_Env_Grass_Short_Clump_01",
+        "assetId": 14768,
+        "material": "Grass_01.tga",
+        "texture": "Grass_01",
+        "uv": [
+          0.3375,
+          0.8251
+        ]
+      },
+      "slope": {
+        "ref": "POLYGON_NatureBiomes_TropicalJungle/SM_Env_Rock_Cliff_01",
+        "color": "#96826c",
+        "pack": "POLYGON_NatureBiomes_TropicalJungle",
+        "asset": "SM_Env_Rock_Cliff_01",
+        "assetId": 14792,
+        "material": "PolygonNatureBiomes_Tropical_Texture_01.png",
+        "texture": "PolygonNatureBiomes_Tropical_Texture_01",
+        "uv": [
+          0.0383,
+          0.6688
+        ]
+      },
+      "shore": {
+        "ref": "POLYGON_NatureBiomes_AridDesert/SM_Env_DirtRoad_Straight_01#e0c08a",
+        "color": "#ac9a82",
+        "pack": "POLYGON_NatureBiomes_AridDesert",
+        "asset": "SM_Env_DirtRoad_Straight_01",
+        "assetId": 12454,
+        "material": "PolygonNatureBiomesS2_AridDesert_Texture_01.png",
+        "texture": "PolygonNatureBiomesS2_AridDesert_Texture_01",
+        "uv": [
+          0.0394,
+          0.6499
+        ]
+      },
+      "seabed": {
+        "ref": "POLYGON_NatureBiomes_TropicalJungle/SM_Env_Rock_Flat_01",
+        "color": "#96826c",
+        "pack": "POLYGON_NatureBiomes_TropicalJungle",
+        "asset": "SM_Env_Rock_Flat_01",
+        "assetId": 14795,
+        "material": "PolygonNatureBiomes_Tropical_Texture_01.png",
+        "texture": "PolygonNatureBiomes_Tropical_Texture_01",
+        "uv": [
+          0.0383,
+          0.6692
+        ]
+      },
+      "water": {
+        "ref": "#2fa7b8",
+        "color": "#2fa7b8"
+      },
+      "skirt": {
+        "ref": "POLYGON_NatureBiomes_TropicalJungle/SM_Env_Rock_Cliff_01",
+        "color": "#96826c",
+        "pack": "POLYGON_NatureBiomes_TropicalJungle",
+        "asset": "SM_Env_Rock_Cliff_01",
+        "assetId": 14792,
+        "material": "PolygonNatureBiomes_Tropical_Texture_01.png",
+        "texture": "PolygonNatureBiomes_Tropical_Texture_01",
+        "uv": [
+          0.0383,
+          0.6688
+        ]
+      }
+    }
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "tile",
+  "bounds": {
+    "min": [
+      -62.423,
+      -40,
+      0
+    ],
+    "max": [
+      15543.3395,
+      0,
+      15605.7625
+    ],
+    "size": [
+      15605.7625,
+      40,
+      15605.7625
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        7740.4583,
+        -20,
+        7802.8813
+      ],
+      "size": [
+        15605.7625,
+        40,
+        15605.7625
+      ]
+    },
+    "trimesh": {
+      "node": "collider",
+      "triangles": 31250,
+      "vertices": 15876
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "terrain": {
+    "cell": 124.8461,
+    "step": 10,
+    "tiles": [
+      125,
+      125
+    ],
+    "gridMin": [
+      -62.423,
+      0
+    ],
+    "subdiv": 1,
+    "shape": "planar",
+    "chunks": [
+      {
+        "node": "terrain_0_0",
+        "tiles": [
+          0,
+          0,
+          25,
+          25
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_1_0",
+        "tiles": [
+          25,
+          0,
+          50,
+          25
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_2_0",
+        "tiles": [
+          50,
+          0,
+          75,
+          25
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_3_0",
+        "tiles": [
+          75,
+          0,
+          100,
+          25
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_4_0",
+        "tiles": [
+          100,
+          0,
+          125,
+          25
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_0_1",
+        "tiles": [
+          0,
+          25,
+          25,
+          50
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_1_1",
+        "tiles": [
+          25,
+          25,
+          50,
+          50
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_2_1",
+        "tiles": [
+          50,
+          25,
+          75,
+          50
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_3_1",
+        "tiles": [
+          75,
+          25,
+          100,
+          50
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_4_1",
+        "tiles": [
+          100,
+          25,
+          125,
+          50
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_0_2",
+        "tiles": [
+          0,
+          50,
+          25,
+          75
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_1_2",
+        "tiles": [
+          25,
+          50,
+          50,
+          75
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_2_2",
+        "tiles": [
+          50,
+          50,
+          75,
+          75
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_3_2",
+        "tiles": [
+          75,
+          50,
+          100,
+          75
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_4_2",
+        "tiles": [
+          100,
+          50,
+          125,
+          75
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_0_3",
+        "tiles": [
+          0,
+          75,
+          25,
+          100
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_1_3",
+        "tiles": [
+          25,
+          75,
+          50,
+          100
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_2_3",
+        "tiles": [
+          50,
+          75,
+          75,
+          100
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_3_3",
+        "tiles": [
+          75,
+          75,
+          100,
+          100
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_4_3",
+        "tiles": [
+          100,
+          75,
+          125,
+          100
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_0_4",
+        "tiles": [
+          0,
+          100,
+          25,
+          125
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_1_4",
+        "tiles": [
+          25,
+          100,
+          50,
+          125
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_2_4",
+        "tiles": [
+          50,
+          100,
+          75,
+          125
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_3_4",
+        "tiles": [
+          75,
+          100,
+          100,
+          125
+        ],
+        "triangles": 1250
+      },
+      {
+        "node": "terrain_4_4",
+        "tiles": [
+          100,
+          100,
+          125,
+          125
+        ],
+        "triangles": 1250
+      }
+    ],
+    "water": null,
+    "scatter": []
+  },
+  "compress": "meshopt"
+}

@@ -1,0 +1,296 @@
+{
+  "version": 1,
+  "name": "car-stock",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Veh_Stock_Car_01",
+    "assetId": 12671
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "axle-centre",
+  "bounds": {
+    "min": [
+      -0.9734,
+      -0.3412,
+      -2.5481
+    ],
+    "max": [
+      0.9664,
+      0.9469,
+      2.2519
+    ],
+    "size": [
+      1.9398,
+      1.2881,
+      4.8
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Veh_Stock_Car_01_Engine_01",
+      "role": null,
+      "pivot": [
+        0.0015,
+        -0.3077,
+        -0.173
+      ]
+    },
+    {
+      "node": "SM_Veh_Stock_Car_01_Gear_Stick_01",
+      "role": "lever",
+      "pivot": [
+        0.0015,
+        -0.3077,
+        -0.173
+      ]
+    },
+    {
+      "node": "SM_Veh_Stock_Car_01_Netting_01",
+      "role": null,
+      "pivot": [
+        0.0015,
+        -0.3077,
+        -0.173
+      ]
+    },
+    {
+      "node": "SM_Veh_Stock_Car_01_Seat_01",
+      "role": "static",
+      "pivot": [
+        0.0015,
+        -0.3077,
+        -0.173
+      ]
+    },
+    {
+      "node": "SM_Veh_Stock_Car_01_Steering_Wheel_01",
+      "role": "steering",
+      "pivot": [
+        0.0015,
+        -0.1041,
+        -0.4792
+      ]
+    },
+    {
+      "node": "SM_Veh_Stock_Car_01_Wheel_FL",
+      "role": "wheel",
+      "pivot": [
+        0.7364,
+        0,
+        1.318
+      ],
+      "radius": 0.3412,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Stock_Car_01_Wheel_FR",
+      "role": "wheel",
+      "pivot": [
+        -0.7364,
+        0,
+        1.318
+      ],
+      "radius": 0.3412,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Stock_Car_01_Wheel_RL",
+      "role": "wheel",
+      "pivot": [
+        0.7364,
+        0,
+        -1.3105
+      ],
+      "radius": 0.3412,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Stock_Car_01_Wheel_RR",
+      "role": "wheel",
+      "pivot": [
+        -0.7364,
+        0,
+        -1.3256
+      ],
+      "radius": 0.3412,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Stock_Car_01_Body_01_Bonnet_01",
+      "role": "lid",
+      "pivot": [
+        -0.0025,
+        0.5415,
+        0.8062
+      ],
+      "hinge": {
+        "pos": [
+          -0.0025,
+          0.5415,
+          0.8062
+        ],
+        "axis": [
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Veh_Stock_Car_01_Body_01_Glass_01",
+      "role": "static",
+      "pivot": [
+        0.0015,
+        -0.3077,
+        -0.173
+      ]
+    },
+    {
+      "node": "SM_Veh_Stock_Car_01_Body_01_Windscreen_Sticker_01",
+      "role": "static",
+      "pivot": [
+        0.0015,
+        -0.3077,
+        -0.173
+      ]
+    }
+  ],
+  "wheels": {
+    "fl": {
+      "node": "SM_Veh_Stock_Car_01_Wheel_FL",
+      "radius": 0.3412,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": true,
+      "pos": [
+        0.7364,
+        0,
+        1.318
+      ]
+    },
+    "fr": {
+      "node": "SM_Veh_Stock_Car_01_Wheel_FR",
+      "radius": 0.3412,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": true,
+      "pos": [
+        -0.7364,
+        0,
+        1.318
+      ]
+    },
+    "rl": {
+      "node": "SM_Veh_Stock_Car_01_Wheel_RL",
+      "radius": 0.3412,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": false,
+      "pos": [
+        0.7364,
+        0,
+        -1.3105
+      ]
+    },
+    "rr": {
+      "node": "SM_Veh_Stock_Car_01_Wheel_RR",
+      "radius": 0.3412,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": false,
+      "pos": [
+        -0.7364,
+        0,
+        -1.3256
+      ]
+    }
+  },
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        -0.0035,
+        0.3028,
+        -0.1481
+      ],
+      "size": [
+        1.9398,
+        1.2881,
+        4.8
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 0.902827,
+    "fit": {
+      "length": 4.8
+    }
+  },
+  "variants": [
+    {
+      "name": "red",
+      "tint": "#c62828"
+    },
+    {
+      "name": "blue",
+      "tint": "#1e5aa8"
+    },
+    {
+      "name": "yellow",
+      "tint": "#f2b705"
+    },
+    {
+      "name": "green",
+      "tint": "#2e7d32"
+    },
+    {
+      "name": "white",
+      "tint": "#e8e8e8"
+    },
+    {
+      "name": "black",
+      "tint": "#202024"
+    },
+    {
+      "name": "orange",
+      "tint": "#ef6c00"
+    },
+    {
+      "name": "purple",
+      "tint": "#6a1b9a"
+    }
+  ],
+  "compress": "meshopt"
+}

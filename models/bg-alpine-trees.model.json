@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "bg-alpine-trees",
+  "source": {
+    "pack": "POLYGON_NatureBiomes_AlpineMountain",
+    "asset": "SM_Env_Background_Trees_01",
+    "assetId": 14584
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -13.7072,
+      0,
+      -4.2266
+    ],
+    "max": [
+      13.7072,
+      16.0199,
+      4.2266
+    ],
+    "size": [
+      27.4144,
+      16.0199,
+      8.4532
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        8.01,
+        0
+      ],
+      "size": [
+        27.4144,
+        16.0199,
+        8.4532
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "compress": "meshopt"
+}

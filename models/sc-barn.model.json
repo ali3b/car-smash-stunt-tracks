@@ -1,0 +1,158 @@
+{
+  "version": 1,
+  "name": "sc-barn",
+  "source": {
+    "pack": "POLYGON_Farm",
+    "asset": "SM_Bld_Barn_01",
+    "assetId": 15457
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -8.5785,
+      0,
+      -9
+    ],
+    "max": [
+      8.5785,
+      11.5764,
+      9
+    ],
+    "size": [
+      17.157,
+      11.5764,
+      18
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Bld_Barn_01_Door_01",
+      "role": "door",
+      "pivot": [
+        -7.4134,
+        2.2353,
+        2.4108
+      ],
+      "hinge": {
+        "pos": [
+          -7.4134,
+          2.2353,
+          2.4108
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Bld_Barn_01_Door_02",
+      "role": "door",
+      "pivot": [
+        -7.4134,
+        2.2353,
+        0.0026
+      ],
+      "hinge": {
+        "pos": [
+          -7.4134,
+          2.2353,
+          0.0026
+        ],
+        "axis": [
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Bld_Barn_01_Door_03",
+      "role": "door",
+      "pivot": [
+        7.4079,
+        2.2353,
+        2.4108
+      ],
+      "hinge": {
+        "pos": [
+          7.4079,
+          2.2353,
+          2.4108
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Bld_Barn_01_Door_04",
+      "role": "door",
+      "pivot": [
+        7.4079,
+        2.2353,
+        0.0026
+      ],
+      "hinge": {
+        "pos": [
+          7.4079,
+          2.2353,
+          0.0026
+        ],
+        "axis": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "node": "SM_Bld_Barn_01_Shutter_01",
+      "role": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Bld_Barn_01_Shutter_02",
+      "role": null,
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        5.7882,
+        0
+      ],
+      "size": [
+        17.157,
+        11.5764,
+        18
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.271382,
+    "fit": {
+      "length": 18
+    }
+  },
+  "compress": "meshopt"
+}

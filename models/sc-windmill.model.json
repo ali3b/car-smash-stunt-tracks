@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "name": "sc-windmill",
+  "source": {
+    "pack": "POLYGON_NatureBiomes_MeadowForest",
+    "asset": "SM_Bld_Windmill_01",
+    "assetId": 15219
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -6.9495,
+      0,
+      -5.7137
+    ],
+    "max": [
+      6.9495,
+      19,
+      5.7137
+    ],
+    "size": [
+      13.899,
+      19,
+      11.4274
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Bld_Windmill_01_Blades_01",
+      "role": "blade",
+      "pivot": [
+        0.0224,
+        2.8996,
+        1.1858
+      ]
+    }
+  ],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        9.5,
+        0
+      ],
+      "size": [
+        13.899,
+        19,
+        11.4274
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.466638,
+    "fit": {
+      "height": 19
+    }
+  },
+  "compress": "meshopt"
+}

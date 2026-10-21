@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "name": "sky-desert",
+  "source": {
+    "kind": "skydome",
+    "preset": "desert",
+    "ring": [
+      {
+        "ref": "POLYGON_NatureBiomes_AridDesert/SM_Env_Backrgound_Hill_01",
+        "pack": "POLYGON_NatureBiomes_AridDesert",
+        "asset": "SM_Env_Backrgound_Hill_01",
+        "assetId": 12439
+      },
+      {
+        "ref": "POLYGON_NatureBiomes_AridDesert/SM_Env_Backrgound_Hill_02",
+        "pack": "POLYGON_NatureBiomes_AridDesert",
+        "asset": "SM_Env_Backrgound_Hill_02",
+        "assetId": 12440
+      },
+      {
+        "ref": "POLYGON_NatureBiomes_AridDesert/SM_Env_Backrgound_Hill_03",
+        "pack": "POLYGON_NatureBiomes_AridDesert",
+        "asset": "SM_Env_Backrgound_Hill_03",
+        "assetId": 12441
+      }
+    ]
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "centre",
+  "bounds": {
+    "min": [
+      -9000,
+      -9000,
+      -9000
+    ],
+    "max": [
+      9000,
+      9000,
+      9000
+    ],
+    "size": [
+      18000,
+      18000,
+      18000
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        18000,
+        18000,
+        18000
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "skydome": {
+    "radius": 9000,
+    "colors": {
+      "zenith": "#3f7fcf",
+      "horizon": "#f3d9aa",
+      "ground": "#c8a46e",
+      "ring": "#a8704e"
+    },
+    "dome": "dome",
+    "ring": {
+      "node": "ring",
+      "props": 60,
+      "triangles": 35960
+    },
+    "panorama": {
+      "file": "sky-desert_panorama.png",
+      "width": 2048,
+      "height": 1024
+    }
+  },
+  "compress": "meshopt"
+}

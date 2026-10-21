@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "name": "car-buggy",
+  "source": {
+    "pack": "POLYGON_Palm_City",
+    "asset": "SM_Veh_Buggy_01",
+    "assetId": 2477
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "axle-centre",
+  "bounds": {
+    "min": [
+      -1.0255,
+      -0.3791,
+      -1.9679
+    ],
+    "max": [
+      1.0255,
+      1.3955,
+      1.9321
+    ],
+    "size": [
+      2.051,
+      1.7746,
+      3.9
+    ]
+  },
+  "parts": [
+    {
+      "node": "SM_Veh_Buggy_01_Steering_Wheel",
+      "role": "steering",
+      "pivot": [
+        0,
+        -0.3791,
+        -0.0179
+      ]
+    },
+    {
+      "node": "SM_Veh_Buggy_01_Wheel_FL",
+      "role": "wheel",
+      "pivot": [
+        0.8688,
+        0,
+        1.1977
+      ],
+      "radius": 0.3791,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Buggy_01_Wheel_FR",
+      "role": "wheel",
+      "pivot": [
+        -0.8688,
+        0,
+        1.1994
+      ],
+      "radius": 0.3791,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Buggy_01_Wheel_RL",
+      "role": "wheel",
+      "pivot": [
+        0.8688,
+        0,
+        -1.1994
+      ],
+      "radius": 0.3791,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "node": "SM_Veh_Buggy_01_Wheel_RR",
+      "role": "wheel",
+      "pivot": [
+        -0.8688,
+        0,
+        -1.1977
+      ],
+      "radius": 0.3791,
+      "spinAxis": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "wheels": {
+    "fl": {
+      "node": "SM_Veh_Buggy_01_Wheel_FL",
+      "radius": 0.3791,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": true,
+      "pos": [
+        0.8688,
+        0,
+        1.1977
+      ]
+    },
+    "fr": {
+      "node": "SM_Veh_Buggy_01_Wheel_FR",
+      "radius": 0.3791,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": true,
+      "pos": [
+        -0.8688,
+        0,
+        1.1994
+      ]
+    },
+    "rl": {
+      "node": "SM_Veh_Buggy_01_Wheel_RL",
+      "radius": 0.3791,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": false,
+      "pos": [
+        0.8688,
+        0,
+        -1.1994
+      ]
+    },
+    "rr": {
+      "node": "SM_Veh_Buggy_01_Wheel_RR",
+      "radius": 0.3791,
+      "axle": [
+        1,
+        0,
+        0
+      ],
+      "steer": false,
+      "pos": [
+        -0.8688,
+        0,
+        -1.1977
+      ]
+    }
+  },
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        0.5082,
+        -0.0179
+      ],
+      "size": [
+        2.051,
+        1.7746,
+        3.9
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 0.988994,
+    "fit": {
+      "length": 3.9
+    }
+  },
+  "variants": [
+    {
+      "name": "red",
+      "tint": "#c62828"
+    },
+    {
+      "name": "blue",
+      "tint": "#1e5aa8"
+    },
+    {
+      "name": "yellow",
+      "tint": "#f2b705"
+    },
+    {
+      "name": "green",
+      "tint": "#2e7d32"
+    },
+    {
+      "name": "white",
+      "tint": "#e8e8e8"
+    },
+    {
+      "name": "black",
+      "tint": "#202024"
+    },
+    {
+      "name": "orange",
+      "tint": "#ef6c00"
+    },
+    {
+      "name": "purple",
+      "tint": "#6a1b9a"
+    }
+  ],
+  "compress": "meshopt"
+}

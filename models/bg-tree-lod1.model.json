@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "name": "bg-tree-lod1",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Env_Tree_03",
+    "assetId": 13309
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -6.8373,
+      0,
+      -8.1223
+    ],
+    "max": [
+      6.8373,
+      13,
+      8.1223
+    ],
+    "size": [
+      13.6746,
+      13,
+      16.2446
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        6.5,
+        0
+      ],
+      "size": [
+        13.6746,
+        13,
+        16.2446
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 2.110024,
+    "fit": {
+      "height": 13
+    }
+  },
+  "compress": "meshopt",
+  "warnings": [
+    "simplify: kept 61% of the triangles (413 of 681), not 50%: the mesh cannot lose more without changing shape"
+  ]
+}

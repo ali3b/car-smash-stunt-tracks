@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "name": "sc-gas-station",
+  "source": {
+    "kind": "composite",
+    "parts": [
+      {
+        "name": "SM_Prop_Gaspump_Cover_01",
+        "pack": "POLYGON_Town",
+        "asset": "SM_Prop_Gaspump_Cover_01",
+        "assetId": 14237
+      },
+      {
+        "name": "SM_Prop_Gaspump_01",
+        "pack": "POLYGON_Town",
+        "asset": "SM_Prop_Gaspump_01",
+        "assetId": 14235
+      },
+      {
+        "name": "SM_Prop_Gaspump_01_2",
+        "pack": "POLYGON_Town",
+        "asset": "SM_Prop_Gaspump_01",
+        "assetId": 14235
+      }
+    ]
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "composite",
+  "bounds": {
+    "min": [
+      -9.5001,
+      -0.0001,
+      -4.9774
+    ],
+    "max": [
+      9.5001,
+      7.4466,
+      4.9774
+    ],
+    "size": [
+      19.0002,
+      7.4467,
+      9.9548
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        3.7233,
+        0
+      ],
+      "size": [
+        19.0002,
+        7.4467,
+        9.9548
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "composite": {
+    "parts": [
+      {
+        "node": "SM_Prop_Gaspump_Cover_01",
+        "pack": "POLYGON_Town",
+        "asset": "SM_Prop_Gaspump_Cover_01",
+        "assetId": 14237,
+        "pos": [
+          0,
+          0,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1.4199,
+          1.4199,
+          1.4199
+        ],
+        "bounds": {
+          "min": [
+            -9.5001,
+            -0.0001,
+            -4.9774
+          ],
+          "max": [
+            9.5001,
+            7.4466,
+            4.9774
+          ],
+          "size": [
+            19.0002,
+            7.4467,
+            9.9548
+          ]
+        }
+      },
+      {
+        "node": "SM_Prop_Gaspump_01",
+        "pack": "POLYGON_Town",
+        "asset": "SM_Prop_Gaspump_01",
+        "assetId": 14235,
+        "pos": [
+          -4.5,
+          0,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1.4011,
+          1.4011,
+          1.4011
+        ],
+        "bounds": {
+          "min": [
+            -5.5171,
+            0,
+            -0.4483
+          ],
+          "max": [
+            -3.4829,
+            3.0001,
+            0.4483
+          ],
+          "size": [
+            2.0342,
+            3.0001,
+            0.8966
+          ]
+        }
+      },
+      {
+        "node": "SM_Prop_Gaspump_01_2",
+        "pack": "POLYGON_Town",
+        "asset": "SM_Prop_Gaspump_01",
+        "assetId": 14235,
+        "pos": [
+          4.5,
+          0,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1.4011,
+          1.4011,
+          1.4011
+        ],
+        "bounds": {
+          "min": [
+            3.4829,
+            0,
+            -0.4483
+          ],
+          "max": [
+            5.5171,
+            3.0001,
+            0.4483
+          ],
+          "size": [
+            2.0342,
+            3.0001,
+            0.8966
+          ]
+        }
+      }
+    ],
+    "materials": 1,
+    "textures": 1
+  },
+  "compress": "meshopt"
+}

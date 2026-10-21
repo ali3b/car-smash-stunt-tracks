@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "name": "ts-gantry",
+  "source": {
+    "pack": "POLYGON_Pro_Racer",
+    "asset": "SM_Prop_Gantry_01",
+    "assetId": 13478
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "bottom-centre",
+  "bounds": {
+    "min": [
+      -8.75,
+      0,
+      -0.8058
+    ],
+    "max": [
+      8.75,
+      8.6638,
+      0.8058
+    ],
+    "size": [
+      17.5,
+      8.6638,
+      1.6116
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        4.3319,
+        0
+      ],
+      "size": [
+        17.5,
+        8.6638,
+        1.6116
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "scale": {
+    "modelScale": 1.189737,
+    "fit": {
+      "width": 17.5
+    }
+  },
+  "compress": "meshopt"
+}

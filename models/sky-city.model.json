@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "name": "sky-city",
+  "source": {
+    "kind": "skydome",
+    "preset": "city",
+    "ring": [
+      {
+        "ref": "POLYGON_Pro_Racer/SM_Bld_Background_01",
+        "pack": "POLYGON_Pro_Racer",
+        "asset": "SM_Bld_Background_01",
+        "assetId": 13150
+      },
+      {
+        "ref": "POLYGON_Pro_Racer/SM_Bld_Background_03",
+        "pack": "POLYGON_Pro_Racer",
+        "asset": "SM_Bld_Background_03",
+        "assetId": 13152
+      },
+      {
+        "ref": "POLYGON_Pro_Racer/SM_Bld_Background_05",
+        "pack": "POLYGON_Pro_Racer",
+        "asset": "SM_Bld_Background_05",
+        "assetId": 13154
+      },
+      {
+        "ref": "POLYGON_Pro_Racer/SM_Bld_Background_06",
+        "pack": "POLYGON_Pro_Racer",
+        "asset": "SM_Bld_Background_06",
+        "assetId": 13155
+      },
+      {
+        "ref": "POLYGON_Pro_Racer/SM_Bld_Background_10",
+        "pack": "POLYGON_Pro_Racer",
+        "asset": "SM_Bld_Background_10",
+        "assetId": 13159
+      },
+      {
+        "ref": "POLYGON_Pro_Racer/SM_Bld_Background_11",
+        "pack": "POLYGON_Pro_Racer",
+        "asset": "SM_Bld_Background_11",
+        "assetId": 13160
+      }
+    ]
+  },
+  "units": "m",
+  "forward": "+Z",
+  "up": "+Y",
+  "origin": "centre",
+  "bounds": {
+    "min": [
+      -9000,
+      -9000,
+      -9000
+    ],
+    "max": [
+      9000,
+      9000,
+      9000
+    ],
+    "size": [
+      18000,
+      18000,
+      18000
+    ]
+  },
+  "parts": [],
+  "sockets": [],
+  "clips": [],
+  "collider": {
+    "box": {
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        18000,
+        18000,
+        18000
+      ]
+    }
+  },
+  "licence": "Synty Store EULA: not for redistribution as source assets",
+  "skydome": {
+    "radius": 9000,
+    "colors": {
+      "zenith": "#5584c2",
+      "horizon": "#dde1e6",
+      "ground": "#6a6d72",
+      "ring": "#59616e"
+    },
+    "dome": "dome",
+    "ring": {
+      "node": "ring",
+      "props": 936,
+      "triangles": 93964
+    },
+    "panorama": {
+      "file": "sky-city_panorama.png",
+      "width": 2048,
+      "height": 1024
+    }
+  },
+  "compress": "meshopt"
+}
