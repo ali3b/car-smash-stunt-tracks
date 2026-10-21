@@ -12,6 +12,8 @@ import { StubRaceView } from '../game/stub-view';
 import type { CameraMode, CarState as SimCar, RaceSetup, RaceSnapshot, RaceView } from '../game/types';
 import { CameraRig, tvCameras } from './cameras';
 import { CarView, type CarState } from './car-view';
+import { updateLods } from './instancing';
+import { TurnEase } from './turn-ease';
 import { buildWorld, type World } from './world';
 
 const MPH = 0.44704;
@@ -48,6 +50,11 @@ export class WorldRaceView implements RaceView {
   private info = { speedMph: 0, rpm: 0, maxRpm: MAX_RPM, gear: 1 };
   private lastPos: THREE.Vector3 | null = null;
   private lastOpp: THREE.Vector3 | null = null;
+  /**
+   * The in-car view's orientation, eased over the last steps (render/turn-ease.ts: the 20 Hz steps' uneven turns
+   * showed as jolts through loops). `eyeEase.window = 0` turns it off (smooth-check --no-eye-ease).
+   */
+  readonly eyeEase = new TurnEase(2);
 
   /** Where the sound is heard from: the camera and its right-hand axis (the rival's engine pans). */
   get camera() {
@@ -83,6 +90,11 @@ export class WorldRaceView implements RaceView {
     }
     this.rig = new CameraRig(tvCameras(setup.track), document.body);
     this.rig.setWalls(this.world.root);
+    // The drawn wheels stand on the track pieces (car-view.ts placeWheels).
+    const pieces = this.world.root.getObjectByName('pieces');
+    const ground = pieces ? [...pieces.children] : [];
+    this.player.setGround(ground);
+    this.opponent?.setGround(ground);
     this.rig.setMode(this.mode, this.player);
   }
 
@@ -93,8 +105,10 @@ export class WorldRaceView implements RaceView {
     if (this.lastPos && this.lastPos.distanceTo(s.position) > TELEPORT_M) {
       this.player.reset();
       this.rig.setMode(this.mode, this.player);
+      this.eyeEase.reset();
     }
     (this.lastPos ??= new THREE.Vector3()).copy(s.position);
+    const eye = this.eyeEase.at(prev.tick, prev.player.quat, next.tick, next.player.quat, alpha);
     this.player.update(s, dt);
     if (this.opponent && prev.opponent && next.opponent) {
       const o = interpolate(prev.opponent, next.opponent, alpha);
@@ -105,8 +119,11 @@ export class WorldRaceView implements RaceView {
     this.info.speedMph = Math.abs(s.mph);
     this.info.rpm = s.rpm ?? 0;
     this.info.gear = next.player.gear;
-    this.rig.update(this.player, dt, this.info);
+    // The car's own needles (Street Racer cars): the same speed and revs as our dashboard would show.
+    if (this.mode === 'cockpit') this.player.setInstruments({ speedMph: this.info.speedMph, rpm: this.info.rpm, boost: THREE.MathUtils.clamp((this.info.rpm / MAX_RPM - 0.3) / 0.7, 0, 1) }, dt);
+    this.rig.update(this.player, dt, this.info, this.opponent ? [this.opponent] : [], eye);
     this.world.atmosphere.update(this.rig.camera, this.player.object.position, this.mode === 'tv' ? 60 : 45);
+    updateLods(this.world.root, this.rig.camera);
   }
 
   render(renderer: THREE.WebGLRenderer) {
@@ -147,6 +164,8 @@ export class WorldRaceView implements RaceView {
       body: [this.player.body.rotation.x, this.player.body.rotation.z],
       screen: [ndc.x, ndc.y],
       wheels,
+      /** How far the drawn suspension moved each wheel to the road (car-view.ts placeWheels). */
+      travel: this.player.wheelTravel().map((t) => +t.toFixed(3)),
       mode: this.mode,
     };
   }

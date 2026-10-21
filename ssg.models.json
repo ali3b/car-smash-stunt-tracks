@@ -689,9 +689,16 @@
     {
       "name": "tp-corkscrew-roll",
       "trackpiece": {
-        "preset": "barrel-roll",
-        "radius": 7.16,
-        "length": 2
+        "footprint": [1, 2],
+        "path": [
+          {
+            "length": 124.84,
+            "profile": {
+              "shape": "pipe",
+              "radius": 7.1567
+            }
+          }
+        ]
       }
     },
     {
@@ -854,6 +861,7 @@
     },
     {
       "name": "sc-palm",
+      "lods": [0.5, 0.15, 0.02],
       "asset": "POLYGON_Palm_City/SM_Env_Tree_Palm_02",
       "fit": {
         "height": 22
@@ -861,6 +869,7 @@
     },
     {
       "name": "sc-palm-b",
+      "lods": [0.5, 0.15, 0.02],
       "asset": "POLYGON_Palm_City/SM_Env_Tree_Palm_05",
       "fit": {
         "height": 24
@@ -868,6 +877,7 @@
     },
     {
       "name": "sc-cactus",
+      "lods": [0.5, 0.15, 0.02],
       "asset": "POLYGON_NatureBiomes_AridDesert/SM_Env_Cactus_03",
       "fit": {
         "height": 7
@@ -875,6 +885,7 @@
     },
     {
       "name": "sc-cactus-b",
+      "lods": [0.5, 0.15, 0.02],
       "asset": "POLYGON_NatureBiomes_AridDesert/SM_Env_Succulent_06",
       "fit": {
         "height": 7.5
@@ -882,6 +893,7 @@
     },
     {
       "name": "sc-pine",
+      "lods": [0.5, 0.15, 0.02],
       "asset": "POLYGON_NatureBiomes_AlpineMountain/SM_Env_Pine_01",
       "fit": {
         "height": 22
@@ -889,6 +901,7 @@
     },
     {
       "name": "sc-jungle-tree",
+      "lods": [0.5, 0.15, 0.02],
       "asset": "POLYGON_NatureBiomes_TropicalJungle/SM_Env_Tree_Banana_03",
       "fit": {
         "height": 11
@@ -1118,6 +1131,7 @@
     },
     {
       "name": "car-sr-muscle",
+      "decals": false,
       "asset": "POLYGON_Street_Racer/SK_Veh_Preset_Muscle_01",
       "origin": "axle-centre",
       "fit": {
@@ -1160,6 +1174,7 @@
     },
     {
       "name": "bg-pine",
+      "lods": [0.5, 0.15, 0.02],
       "asset": "POLYGON_NatureBiomes_AlpineMountain/SM_Env_Pine_01",
       "fit": {
         "height": 22
@@ -1221,6 +1236,46 @@
         "preset": "country",
         "radius": 9000
       }
+    },
+    {
+      "name": "sc-office-c-lod1",
+      "asset": "POLYGON_City/SM_Bld_OfficeOld_Large_01",
+      "fit": {
+        "height": 36
+      },
+      "simplify": 0.5
+    },
+    {
+      "name": "sc-office-lod1",
+      "asset": "POLYGON_City/SM_Bld_OfficeOld_Small_01",
+      "fit": {
+        "height": 38
+      },
+      "simplify": 0.5
+    },
+    {
+      "name": "sc-office-b-lod1",
+      "asset": "POLYGON_City/SM_Bld_OfficeOld_Large_02",
+      "fit": {
+        "height": 34
+      },
+      "simplify": 0.5
+    },
+    {
+      "name": "sc-farm-tree-lod1",
+      "asset": "POLYGON_Farm/SM_Env_Tree_Large_01",
+      "fit": {
+        "height": 16
+      },
+      "simplify": 0.5
+    },
+    {
+      "name": "bg-tree-lod1",
+      "asset": "POLYGON_Pro_Racer/SM_Env_Tree_03",
+      "fit": {
+        "height": 13
+      },
+      "simplify": 0.5
     },
     {
       "name": "terrain-sunday-drive",

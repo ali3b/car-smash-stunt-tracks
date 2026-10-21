@@ -12,6 +12,7 @@ import type { Stage } from '../engine/renderer';
 import { CarView } from '../render/car-view';
 import { CAMERA_MODES, CameraRig, tvCameras, type CameraMode } from '../render/cameras';
 import { buildWorld, loadModels, perfInfo } from '../render/world';
+import { updateLods } from '../render/instancing';
 import { TILE_M, UNIT_M, type TrackFile } from '../track/types';
 
 interface GoldenCar {
@@ -137,8 +138,9 @@ export async function replayScene(stage: Stage, params: URLSearchParams) {
   const render = (_alpha: number, frameDt: number) => {
     if (!lastState) step(0);
     const st = lastState!;
-    rig.update(player, frameDt, { speedMph: st.speed / MPH, rpm: st.rpm ?? 0, maxRpm });
+    rig.update(player, frameDt, { speedMph: st.speed / MPH, rpm: st.rpm ?? 0, maxRpm }, opponent ? [opponent] : []);
     world.atmosphere.update(rig.camera, player.object.position, rig.mode === 'tv' ? 60 : 45);
+    updateLods(world.root, rig.camera);
     stage.renderer.render(stage.scene, rig.camera);
     hud.textContent = `${golden.replay} · ${track.name} · ${golden.player_car} · ${(t).toFixed(2)} / ${duration.toFixed(2)} s · frame ${Math.floor(t * HZ)} · ${rig.describe()} · C camera, Space pause, ←/→ seek`;
   };

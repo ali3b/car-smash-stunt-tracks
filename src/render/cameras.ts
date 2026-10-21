@@ -1,6 +1,7 @@
-// Cameras for a car: chase (behind and above, lagging), in-car (the driver's eye, with our own dashboard overlay:
-// CS-FB-005, the Synty cars have no dashboard part), and TV (fixed track-side cameras that cut from one to the next
-// as the car passes, zooming to keep it framed). `next()` cycles them (the C key in the replay scene).
+// Cameras for a car: chase (behind and above, lagging; it rises over another car instead of entering it), in-car (the
+// driver's eye: the car's own instruments where it has them, CS-FB-023, else our drawn dashboard overlay, CS-FB-005;
+// its orientation eased over the last race steps), and TV (fixed track-side cameras that cut from one to the next as
+// the car passes, zooming to keep it framed). `next()` cycles them (the C key in the replay scene).
 import * as THREE from 'three';
 import type { CarView } from './car-view';
 import { Dashboard } from './dashboard';
@@ -48,6 +49,37 @@ export function wallsOf(world: THREE.Object3D): THREE.Object3D[] {
   return out;
 }
 
+/** The chase camera keeps this far over another car's roof (m)... */
+const CLEAR_ROOF = 2.2;
+/** ...when it is within the car's footprint, easing in from this far outside it (m)... */
+const CLEAR_REACH = 3;
+/** ...and never rises more than this (m). */
+const CLEAR_MAX_LIFT = 4;
+
+/** The camera's place in a car's frame. */
+function localTo(car: CarView, p: THREE.Vector3): THREE.Vector3 {
+  car.object.updateMatrixWorld();
+  return car.object.worldToLocal(p.clone());
+}
+
+/** How far above `p` the chase camera must go to clear car `o` (0 when it is clear of it). */
+function liftOver(o: CarView, p: THREE.Vector3): number {
+  const l = localTo(o, p);
+  const b = o.bounds;
+  const out = Math.hypot(Math.max(b.min.x - l.x, 0, l.x - b.max.x), Math.max(b.min.z - l.z, 0, l.z - b.max.z));
+  if (out >= CLEAR_REACH) return 0;
+  const w = THREE.MathUtils.smoothstep(CLEAR_REACH - out, 0, CLEAR_REACH);
+  return Math.max(0, b.max.y + CLEAR_ROOF - l.y) * w;
+}
+
+/** Opacity for car `o` seen from `p`: 1 when the camera is clear of its box, down to 0 inside it. */
+function fadeFor(o: CarView, p: THREE.Vector3): number {
+  const l = localTo(o, p);
+  const b = o.bounds;
+  const gap = Math.hypot(Math.max(b.min.x - l.x, 0, l.x - b.max.x), Math.max(b.min.y - l.y, 0, l.y - b.max.y), Math.max(b.min.z - l.z, 0, l.z - b.max.z));
+  return THREE.MathUtils.clamp(gap / 0.8, 0, 1);
+}
+
 export class CameraRig {
   readonly camera: THREE.PerspectiveCamera;
   mode: CameraMode = 'chase';
@@ -61,6 +93,8 @@ export class CameraRig {
   private orbitT = 0;
   private walls: THREE.Object3D[] = [];
   private ray = new THREE.Raycaster();
+  /** The chase camera's lift over another car right behind (m, eased). */
+  private lift = 0;
 
   /**
    * The world's enclosed pieces (loops, pipes, corkscrews, tunnels: wallsOf). Behind the car on a curve the chase
@@ -83,7 +117,9 @@ export class CameraRig {
     this.snap = true;
     this.tv = null;
     car?.setInterior(mode === 'cockpit');
+    // A car with its own instruments (CS-FB-023) shows them; the others get our drawn dashboard (CS-FB-005).
     this.dashboard.visible = mode === 'cockpit';
+    this.dashboard.compact = !!car?.hasGauges;
   }
 
   next(car?: CarView) {
@@ -95,7 +131,12 @@ export class CameraRig {
     this.camera.updateProjectionMatrix();
   }
 
-  update(car: CarView, dt: number, info: { speedMph: number; rpm: number; maxRpm?: number; gear?: number }) {
+  /**
+   * `others`: the other cars on the track. The chase camera rises over one that sits where it wants to be (a rival
+   * right behind the player) instead of looking out from inside its body; one it still can't clear fades out.
+   * `eyeTurn`: the in-car view's orientation, eased over the last steps (race-view.ts); the car's own when null.
+   */
+  update(car: CarView, dt: number, info: { speedMph: number; rpm: number; maxRpm?: number; gear?: number }, others: readonly CarView[] = [], eyeTurn: THREE.Quaternion | null = null) {
     const cam = this.camera;
     const obj = car.object;
     obj.updateMatrixWorld();
@@ -111,19 +152,26 @@ export class CameraRig {
       this.chasePos.lerp(want, this.snap ? 1 : k);
       this.chaseLook.lerp(look, this.snap ? 1 : 1 - Math.exp(-dt * 12));
       this.chaseUp.lerp(up, this.snap ? 1 : 1 - Math.exp(-dt * 2.5)).normalize();
+      const snapped = this.snap;
       this.snap = false;
       cam.position.copy(this.chasePos);
       this.keepInside(cam.position, new THREE.Vector3(0, 1.4, 0).applyQuaternion(q).add(pos));
+      // Over other cars: rise quickly as one comes under the camera, settle back slowly once it has gone.
+      const need = Math.min(CLEAR_MAX_LIFT, Math.max(0, ...others.map((o) => liftOver(o, cam.position))));
+      this.lift = snapped ? need : this.lift + (need - this.lift) * (1 - Math.exp(-dt * (need > this.lift ? 10 : 2.5)));
+      cam.position.addScaledVector(this.chaseUp, this.lift);
       cam.up.copy(this.chaseUp);
       cam.lookAt(this.chaseLook);
       cam.fov = 60;
       cam.near = 0.5;
     } else if (this.mode === 'cockpit') {
+      // Where the eye is follows the car exactly; which way it looks may be eased (eyeTurn).
+      const look = eyeTurn ?? q;
       cam.position.copy(car.eye).applyQuaternion(q).add(pos);
-      cam.quaternion.copy(q).multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), Math.PI));
+      cam.quaternion.copy(look).multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), Math.PI));
       // Look a touch down the road.
       cam.quaternion.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), -0.04));
-      cam.up.set(0, 1, 0).applyQuaternion(q);
+      cam.up.set(0, 1, 0).applyQuaternion(look);
       cam.fov = 68;
       cam.near = 0.08;
     } else if (this.mode === 'orbit') {
@@ -161,7 +209,9 @@ export class CameraRig {
       cam.near = 0.5;
     }
     cam.updateProjectionMatrix();
-    this.dashboard.update(info.speedMph, info.rpm, info.maxRpm ?? 8000, info.gear);
+    // Any camera: a car the camera is still inside (or nearly) fades out rather than showing its inside.
+    for (const o of others) o.setFade(fadeFor(o, cam.position));
+    this.dashboard.update(info.speedMph, info.rpm, info.maxRpm ?? 8000, info.gear, dt);
   }
 
   /** Move `camPos` in along the line from `from` (on the car) when a loop / pipe wall is in between. */

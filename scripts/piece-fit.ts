@@ -309,7 +309,7 @@ const CASES: Case[] = [
   { name: 'tp-banked-corner', piece: { kind: 'banked-corner', rot: 0 }, rays: bankedCornerRays() },
   { name: 'tp-pipe', piece: { kind: 'pipe', rot: 0 }, rays: pipeRays(-496, 496, 64) },
   { name: 'tp-pipe-entry', piece: { kind: 'pipe-entry', rot: 0 }, rays: [...straightRays(160, [-90, -60, -30, 0, 30, 60, 90])] },
-  { name: 'tp-corkscrew-roll', piece: { kind: 'corkscrew-roll', rot: 0 }, rays: pipeRays(-1000, 1000, 40), nearest: true },
+  { name: 'tp-corkscrew-roll', piece: { kind: 'corkscrew-roll', rot: 0 }, rays: pipeRays(-1000, 1000, 40), nearest: !process.env.ALL_ROUND },
   { name: 'tp-corkscrew-helix-left', piece: { kind: 'corkscrew-helix', variant: 'left', rot: 0 }, rays: helixRays(true) },
   { name: 'tp-corkscrew-helix-right', piece: { kind: 'corkscrew-helix', variant: 'right', rot: 0 }, rays: helixRays(false) },
 ];
@@ -338,15 +338,19 @@ for (const c of CASES) {
   let where = '';
   let missing = 0;
   let both = 0;
+  let near = 0;
+  let simRays = 0;
   for (const f of fits) {
     if (f.sim === null) continue;
     if (f.vis === null) missing++;
     const gc = f.col !== null ? f.col - f.sim : null;
     const gv = f.vis !== null ? f.vis - f.sim : null;
     if (gv !== null) both++;
+    simRays++;
+    if (gv !== null && Math.abs(gv * U) <= 0.3) near++;
     if (gc !== null && Math.abs(gc) > Math.abs(maxC)) maxC = gc;
     if (gv !== null && Math.abs(gv) > Math.abs(maxV)) { maxV = gv; where = `${f.label} ${f.s.toFixed(0)}`; }
     if (verbose) console.log(`  ${f.label.padEnd(8)} ${f.s.toFixed(0).padStart(6)}  sim ${m(f.sim)}  collider ${m(gc)}  mesh ${m(gv)}`);
   }
-  console.log(`${c.name.padEnd(26)} max gap: collider ${m(maxC)} m, mesh ${m(maxV)} m (at ${where}); ${both} rays fit, ${missing} with no mesh`);
+  console.log(`${c.name.padEnd(26)} max gap: collider ${m(maxC)} m, mesh ${m(maxV)} m (at ${where}); ${both} rays fit, ${missing} with no mesh; ${near}/${simRays} within 0.3 m`);
 }

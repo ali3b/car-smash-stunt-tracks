@@ -2,12 +2,13 @@
 //   ?scene=game (default)             the game: title, menus, races, replays (src/game/flow.ts)
 //   ?scene=race&track=<id>|custom     the game, straight into a race (custom: the editor's Test drive track)
 //   ?scene=garage                     every car from ssg.models.json side by side on a slow turntable
-//   ?scene=track&track=<id>           a bundled track (src/track/tracks/), seen from above (&view=top: straight down)
+//   ?scene=track&track=<id>           a bundled track (src/track/tracks/), seen from above (&view=top: straight down;
+//                                     &shadow=<m>: the shadow box radius)
 //   ?scene=track&local=<name>         a track from local-tracks/ (dev only: scripts/import-trk.mjs)
 //   ?scene=audio                      the sound bench (src/audio/bench.ts)
 //   ?scene=editor                     the track editor (src/editor/)
 //   ?scene=replay&golden=<NAME>       dev only: the original's replay driving on its track (src/scenes/replay.ts)
-//   ?scene=props[&set=<scenery>]      every scenery / background / track-side model of a set (dev aid)
+//   ?scene=props[&set=<scenery>]      every scenery / background / track-side model of a set (dev aid; &lod=<n>: level n)
 //   ?scene=capture (or ?capture)      frame-exact capture for videos: window.__cs.capture (src/scenes/capture.ts)
 // window.__cs is the test/tool handle (scripts/load-check.mjs).
 import * as THREE from 'three';
@@ -24,6 +25,7 @@ import { buildWorld, loadModels, perfInfo } from './render/world';
 import { bootDone, bootMessage, bootProgress, hasWebGL2 } from './boot';
 import { applyAtmosphere, groundMaterial, styleModels } from './render/scenery';
 import { TRACKSIDE_MODELS } from './render/trackside';
+import { lodStats, showLod, updateLods } from './render/instancing';
 import type { Atmosphere } from './render/scenery';
 
 const SCENES = ['game', 'race', 'garage', 'track', 'audio', 'editor', 'replay', 'props', 'capture'] as const;
@@ -80,7 +82,7 @@ async function trackScene(stage: ReturnType<typeof createStage>, params: URLSear
   const tp = [...world.models.keys()].filter((n) => n.startsWith('tp-'));
   const missing = [...new Set(t.pieces.filter((p) => p.kind !== 'scenery' && !world.models.has(modelName(p))).map(modelName))];
   window.__cs.track = { name: t.name, scenery: t.scenery, pieces: t.pieces.length, models: tp.length, missing, issues: world.issues.map((i) => ({ ...i.piece, model: i.model, error: +i.error.toFixed(2) })) };
-  window.__cs.perf = () => perfInfo(stage.renderer, stage.scene);
+  window.__cs.perf = () => ({ ...perfInfo(stage.renderer, stage.scene), lods: lodStats(stage.scene) });
   return world.atmosphere;
 }
 
@@ -103,6 +105,7 @@ async function propsScene(stage: ReturnType<typeof createStage>, params: URLSear
     const m = models.get(n);
     if (!m) continue;
     const o = m.scene.clone(true);
+    showLod(o, m, Number(params.get('lod')) || 0);
     const size = m.manifest.bounds.size;
     const s = Math.min(1, 34 / Math.max(size[0], size[2], size[1] * 0.8));
     o.scale.setScalar(s);
@@ -214,7 +217,8 @@ async function boot() {
     },
     render: (alpha, frameDt) => {
       if (custom) return custom.render(alpha, frameDt);
-      atmosphere?.update(camera, focus, sceneName === 'track' ? 1000 : 220);
+      atmosphere?.update(camera, focus, Number(params.get('shadow')) || (sceneName === 'track' ? 1000 : 220));
+      updateLods(stage.scene, camera);
       stage.renderer.render(stage.scene, camera);
     },
   });
@@ -225,6 +229,8 @@ async function boot() {
     custom?.resize(innerWidth, innerHeight);
   });
   window.__cs.cars = cars.map((c) => c.name);
+  // The shadow box's focus (checks move it to see that still shadows stay put: QA-21).
+  window.__cs.focus = focus;
   window.__cs.loop = loop;
   loop.start();
   bootDone();

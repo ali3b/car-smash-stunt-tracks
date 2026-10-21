@@ -64,7 +64,9 @@ Status: `open` → `triaged (TODO: …)` → `fixed (<commit>)` → `verified` (
 - Severity: workaround        Milestone: CS5
 - Tried: `model_info` on Pro Racer `SM_Veh_Rally_01` (seat, steering wheel, gearstick, roll cage; no dash).
 - Wanted: a dashboard part (or a generic Pro Racer cockpit prop) with sockets for a speedometer and a rev counter.
-- Status: triaged (generator TODO "Inbox: from Car Smash", 2026-10-21)
+- Status: verified (2026-10-22, polish lane) for cars that carry instruments (CS-FB-023): the Street Racer muscle car
+  drives its own needles in the in-car view. Pro Racer / Palm City cars still have no dashboard part, so they keep the
+  drawn dashboard (src/render/dashboard.ts, // CS-FB-005).
 
 ## CS-FB-006 · Restyle one body into several distinct cars
 - Severity: polish        Milestone: CS5
@@ -194,7 +196,10 @@ Status: `open` → `triaged (TODO: …)` → `fixed (<commit>)` → `verified` (
 - Wanted: role `gauge` / `needle` with the needle's pivot and rotation axis (and the dial's angle range if known), so
   the in-car view can drive real needles.
 - Workaround: `src/render/dashboard.ts` draws its own speedometer and rev counter (CS-FB-005).
-- Status: fixed (wave-17 ddb3a3b): roles `gauge` and `needle`, manifest `dashboard` (dial centre, normal, radius, needle pivot/axis/rest/length); game adoption pending (in-car needles)
+- Status: verified (2026-10-22, polish lane): src/render/car-view.ts turns `car-sr-muscle`'s speedometer, rev counter
+  and boost needles about the manifest axis from the sim (dial sweeps calibrated by eye: the dials print no figures,
+  needles rest at 9 o'clock, scale 7:30 → 4:30); the in-car view keeps the whole cabin and shows a compact digital
+  speed + gear from the same smoothed value (one consistent readout, QA-13).
 
 ## CS-FB-024 · No composite / prefab spec (props made of several models)
 - Severity: polish        Milestone: CS5
@@ -214,7 +219,11 @@ Status: `open` → `triaged (TODO: …)` → `fixed (<commit>)` → `verified` (
   option (several triangle budgets in one GLB) for props seen at many distances.
 - Workaround: lighter assets for the background band (Pro Racer `SM_Env_Tree_03`, `bg-pine` at 0.2); no simplify on
   palms.
-- Status: fixed (wave-17 ddb3a3b): exports are LOD0 only (Synty files stacked all LODs), `lods: [...]` writes LOD nodes, foliage-aware simplify; game adoption pending
+- Status: verified (2026-10-22, polish lane) for models whose levels come from the file's own LODs: sc-palm, sc-palm-b,
+  sc-cactus, sc-cactus-b, sc-pine, sc-jungle-tree, bg-pine take `lods: [0.5, 0.15, 0.02]`, drawn by
+  src/render/instancing.ts (LodInstances: copies dealt out between the levels by screen size each frame). Glacier Pass:
+  0.91 M → 0.53 M triangles a frame (overview), 0.80 M → 0.46 M (from the forest edge), 0.5 % of pixels changed. Levels
+  that have to be simplified come out broken: CS-FB-140.
 
 ## CS-FB-026 · Tinted variants on the open-wheeler recolour the whole car
 - Severity: polish        Milestone: CS5
@@ -222,7 +231,8 @@ Status: `open` → `triaged (TODO: …)` → `fixed (<commit>)` → `verified` (
 - Got: warning "no paint colour found in a texture; each variant's tint multiplies the model's own opaque materials":
   tyres and suspension take the tint too (dark red / dark green tyres).
 - Wanted: paint found on this model, or a way to name the paint material/swatch in the spec.
-- Status: fixed (wave-17 ddb3a3b): the open-wheeler's paint is found and tyres stay black; `paint` option; the fallback skips tyre/rim/glass/interior
+- Status: verified (2026-10-22, polish lane): all six car-openwheeler paints checked side by side, tyres and suspension
+  stay black (no game workaround existed).
 
 ## CS-FB-027 · Corkscrew roll about an axis above the deck needs a hand-solved helix
 - Severity: workaround        Milestone: CS5
@@ -245,7 +255,8 @@ Status: `open` → `triaged (TODO: …)` → `fixed (<commit>)` → `verified` (
 - Wanted: decal islands on these bodies recoloured with the paint (as Palm City's lettering is), or a
   `decals: false` option that also works on Street Racer presets (drop or repaint decal islands).
 - Workaround: the car line-up uses only `car-sr-muscle`; the other two were removed.
-- Status: fixed (wave-17 ddb3a3b): `decals: false` paints the livery over (Street Racer); game adoption pending
+- Status: verified (2026-10-22, polish lane): car-sr-muscle has `decals: false`; its eight paints are clean and the
+  in-car needles still work. (Sports / exotic are still out of the line-up: adding cars is a separate decision.)
 
 ## CS-FB-100 · Terrain scatter: no triangle count or budget; some small props cost 500+ triangles each
 - Severity: polish        Milestone: CS5
@@ -298,6 +309,34 @@ Status: `open` → `triaged (TODO: …)` → `fixed (<commit>)` → `verified` (
   (4) `blend: "linear"` for profile and bank changes (the original's pipe entry and bank entries are flat
   triangles: the pipe entry's eased blend is 0.89 m off its walls, the bank entries' smooth twist 0.6 m off the
   creased one — a `triangulate: true` per segment that splits each quad along a chosen diagonal would match them
-  exactly); (5) a barrel roll with a polygon section (the roll is a 12-sided pipe in the original; the round roll is
-  up to 0.6 m off beside its top).
+  exactly); (5) a `pipe` profile with a polygon section (the original's pipe and roll are 12-sided: corners at
+  x 31 / 84 / 115, y 0 / 35 / 88 / 151 / 204 / 235 units; the round tube is up to 0.25 m off its corners), and a way to
+  give each face of a section its own stretch of the path (the original's roll opens its faces one by one, from the
+  right wall at the entry round to the left at the exit; drawn as a whole tube meanwhile, 2026-10-22: the
+  barrel-roll ribbon left a car's wheels up to 2.7 m off it on 70 % of the frames, because the simulation lets a car
+  take any line round the tube).
+- Also found (2026-10-22, all four wheels in the game, `scripts/smooth-check.mjs`): with the deck on the simulated
+  planes, the drawn wheels still float up to 0.63 m or sink 0.56 m at the loop's 30° corners for a step or two (the
+  20 Hz simulation turns the car as a rigid box: front wheels past a corner are under the next face while the rear
+  ones are lifted off the last), and the car squats on its springs over the top. No deck shape is under both, so the
+  game's drawn suspension now drops or lifts each wheel to the deck (`src/render/car-view.ts` placeWheels, travel
+  0.7 m down / 0.6 m up); not a generator gap.
+- Status: open
+
+## CS-FB-140 · `lods`: every simplified level (and LOD0) is the last level's mesh
+- Severity: workaround        Milestone: CS5
+- Tried: `lods: [0.5, 0.15, 0.02]` on POLYGON_City `SM_Bld_OfficeOld_Large_01` / `_Small_01` / `_Large_02`,
+  `SM_Bld_OfficeSquare_01`, `SM_Bld_OfficeRound_01`, Farm `SM_Env_Tree_Large_01`, Pro Racer `SM_Env_Tree_03`,
+  `SM_Env_Tree_Group_01/03`, Farm `SM_Generic_Tree_Patch_02`, Arid `SM_Env_Tree_Dead_01`, Alpine
+  `SM_Env_Background_Trees_01`, Street Racer `SM_Prop_Container_Stack_07` (`ssg model apply`).
+- Got: the manifest lists LOD1–3 with falling triangle counts (`source: simplified`), but in the GLB all four
+  meshes (LOD0's too) point at the same accessors, which hold the last level: `sc-office-c` has 4 meshes on one
+  POSITION accessor of 25 788 vertices (8 596 triangles, LOD3) where LOD0 should be 17 856 triangles. The model's own
+  look is lost (LOD0 is the simplified mesh). Levels taken from the file's own LODs (`source: synty`: pines, palms,
+  cacti, jungle tree) are fine. Also: buildings hardly simplify (offices keep 50 % at every level; OfficeRound 94 %).
+- Wanted: each level its own mesh; LOD0 untouched.
+- Workaround: no `lods` on those models; a lighter twin exported with `simplify: 0.5` (`sc-office-lod1`,
+  `sc-office-b-lod1`, `sc-office-c-lod1`, `sc-farm-tree-lod1`, `bg-tree-lod1` in ssg.models.json) is used as LOD1
+  (src/render/instancing.ts InstanceBatch.build, src/render/world.ts loads them, // CS-FB-140). Downtown Rush:
+  2.12 M → 1.40 M triangles a frame (overview), 2.10 M → 1.39 M (start), 0.06–0.5 % of pixels changed.
 - Status: open

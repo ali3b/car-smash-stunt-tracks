@@ -36,7 +36,9 @@ export async function buildWorld(scene: THREE.Scene, sun: THREE.DirectionalLight
   const pieces = t.pieces.filter((p) => p.kind !== 'scenery').map(modelName);
   const terrainName = terrainModelName(t);
   const world = [terrainName ?? '', apronModelName(t.scenery), skyModelName(t.scenery)];
-  const models = await loadModels([...pieces, 'tp-straight', 'tp-straight-slope', ...styleModels(t.scenery), ...TRACKSIDE_MODELS, ...world].filter((n) => have.includes(n)));
+  // A scenery model's lighter stand-ins for its levels of detail (`<name>-lod1`: CS-FB-140) come with it.
+  const scenery = styleModels(t.scenery).flatMap((n) => [n, `${n}-lod1`, `${n}-lod2`]);
+  const models = await loadModels([...pieces, 'tp-straight', 'tp-straight-slope', ...scenery, ...TRACKSIDE_MODELS, ...world].filter((n) => have.includes(n)));
   const terrainModel = terrainName ? models.get(terrainName) : undefined;
   const apronModel = models.get(apronModelName(t.scenery));
   // The game-side ground (heightfield, outer plane) only where there is no export: no models, or a track that is not

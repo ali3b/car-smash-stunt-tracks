@@ -40,6 +40,32 @@ export interface ModelManifest {
   poses?: { name: string; node: string; clip: string; time: number; bounds: { min: number[]; max: number[]; size: number[] } }[];
   compress?: string;
   warnings?: string[];
+  /**
+   * Levels of detail (spec `lods`): LOD1… are whole copies of the model at fewer triangles under root nodes `node`;
+   * LOD0 (the model itself) is the root's `LOD0` node.
+   */
+  lods?: { level: number; node: string; ratio: number; triangles: number; source: string }[];
+  /** The car's own instruments (Street Racer, CS-FB-023): dials in the model's frame and the needles that turn on them. */
+  dashboard?: { gauges: DashboardGauge[] };
+}
+
+export interface DashboardGauge {
+  /** The dial. */
+  node: string;
+  center: [number, number, number];
+  /** Unit normal of the face, towards the driver. */
+  normal: [number, number, number];
+  radius: number;
+  needle?: {
+    node: string;
+    /** Where the needle node sits (it turns about here). */
+    pivot: [number, number, number];
+    /** A positive turn about this axis is clockwise as the driver sees it. */
+    axis: [number, number, number];
+    /** The direction it points at rest (pivot → tip). */
+    rest: [number, number, number];
+    length: number;
+  };
 }
 
 interface ModelIndex {

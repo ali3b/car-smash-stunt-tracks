@@ -1,9 +1,13 @@
-// The in-car dashboard: our own drawing (CS-FB-005: no Synty dashboard / instrument-cluster part), a canvas over the
-// bottom of the view with the dash panel, a speedometer (mph) and a rev counter with a red line.
+// The in-car dashboard: our own drawing (CS-FB-005: most cars have no dashboard / instrument-cluster part), a canvas
+// over the bottom of the view with the dash panel, a speedometer (mph) and a rev counter with a red line. A car with
+// its own instruments (Street Racer, CS-FB-023: CarView turns its needles) gets the compact form: only the gear and
+// the speed in digits, from the same smoothed speed as the needle, so the two always agree (QA-13).
 export class Dashboard {
   readonly canvas: HTMLCanvasElement;
   private ctx: CanvasRenderingContext2D;
   private shown = false;
+  /** Only the gear and the digital speed (the car's own needles do the rest). */
+  compact = false;
   private speed = 0;
   private rpm = 0;
 
@@ -25,11 +29,12 @@ export class Dashboard {
   }
 
   /** `gear`: 0 neutral, -1 reverse, 1..n (the race HUD hides its speed panel in this view, so the gear is here). */
-  update(speedMph: number, rpm: number, maxRpm: number, gear?: number) {
+  update(speedMph: number, rpm: number, maxRpm: number, gear?: number, dt = 1 / 60) {
     if (!this.shown) return;
-    // Needles ease toward the value (a real gauge has some inertia).
-    this.speed += (speedMph - this.speed) * 0.35;
-    this.rpm += (rpm - this.rpm) * 0.35;
+    // Needles ease toward the value (a real gauge has some inertia), the same at any frame rate.
+    const k = 1 - Math.exp(-dt * 26);
+    this.speed += (speedMph - this.speed) * k;
+    this.rpm += (rpm - this.rpm) * k;
     const dpr = Math.min(devicePixelRatio, 2);
     const w = Math.round(this.canvas.clientWidth * dpr);
     const h = Math.round(this.canvas.clientHeight * dpr);
@@ -39,6 +44,7 @@ export class Dashboard {
     }
     const c = this.ctx;
     c.clearRect(0, 0, w, h);
+    if (this.compact) return this.digital(w, h, gear, dpr);
     // The dash: a dark moulded panel with a curved top edge and a hood over the instruments.
     const g = c.createLinearGradient(0, 0, 0, h);
     g.addColorStop(0, '#2a2d33');
@@ -76,6 +82,41 @@ export class Dashboard {
       c.fillText(gear < 0 ? 'R' : gear === 0 ? 'N' : String(gear), w * 0.5, cy - s * 0.4);
       c.textBaseline = 'alphabetic';
     }
+  }
+
+  /** The compact form: a small plate with the gear and the speed. */
+  private digital(w: number, h: number, gear: number | undefined, dpr: number) {
+    const c = this.ctx;
+    const s = Math.min(h * 0.16, w * 0.045);
+    const pw = s * 4.6;
+    // Bottom right (where the HUD's speed panel sits in the other views), clear of the wheel and the dials.
+    const x = w - pw - s * 0.9;
+    const y = h - s * 1.9;
+    c.fillStyle = 'rgba(8, 9, 11, 0.72)';
+    c.beginPath();
+    c.roundRect(x, y, pw, s * 1.4, s * 0.25);
+    c.fill();
+    c.textBaseline = 'middle';
+    c.font = `bold ${Math.round(s * 0.8)}px ui-monospace, Menlo, Consolas, monospace`;
+    c.textAlign = 'right';
+    c.fillStyle = '#ffcf4a';
+    c.fillText(String(Math.round(this.speed)), x + pw * 0.56, y + s * 0.72);
+    c.font = `${Math.round(s * 0.36)}px system-ui, sans-serif`;
+    c.textAlign = 'left';
+    c.fillStyle = '#9aa3ad';
+    c.fillText('MPH', x + pw * 0.59, y + s * 0.78);
+    if (gear !== undefined) {
+      const b = s * 0.95;
+      const bx = x + pw - b - s * 0.22;
+      const by = y + (s * 1.4 - b) / 2;
+      c.fillStyle = gear < 0 ? '#d83a2e' : '#ffcf4a';
+      c.fillRect(bx, by, b, b);
+      c.fillStyle = gear < 0 ? '#ffffff' : '#141414';
+      c.font = `bold ${Math.round(b * 0.7)}px ui-monospace, Menlo, Consolas, monospace`;
+      c.textAlign = 'center';
+      c.fillText(gear < 0 ? 'R' : gear === 0 ? 'N' : String(gear), bx + b / 2, by + b / 2 + dpr);
+    }
+    c.textBaseline = 'alphabetic';
   }
 
   private gauge(x: number, y: number, r: number, v: number, min: number, max: number, step: number, label: string, red: number | null, dpr: number) {

@@ -94,13 +94,24 @@ for the orchestrator).
   a 24.4 m lane drifting sideways, not a 29.7 m circle; scripts/build-piece-specs.ts now computes tp-loop (and the
   helixes, bank entries, banked pieces and ramps) from src/sim/track-geometry.ts. Loop gap 4.95 m → 0.14 m
   (`npx vite-node scripts/piece-fit.ts`); `loop` is no longer a known issue in smooth-check.
+- Still open (POLISH, 2026-10-22): smooth-check's new in-car loop run (Lagoon Leap, car-super, `--quick` too) is the
+  first quick case that drives a loop, and it fails the wheel check: 13 of 240 frames with a wheel off the deck, gap
+  −0.15 … 0.63 m, on the `loop` section (ticks ~180–190 of that run). For LOOP-FIT; not masked in KNOWN_WHEELS_OFF.
 - Wanted: the loop model's profile (ssg.models.json `tp-loop`) matched to the simulation's loop surface
   (`src/sim/track-surface.ts`), or the reverse; then delete `'loop'` from `KNOWN_WHEELS_OFF`.
 
-### QA-08 · Rival starts inside the chase camera · OPP-RACE
+### QA-08 · Rival starts inside the chase camera · POLISH · fixed
 - Repro: race vs DIAL on the test oval / Palm Bay (flow-check's versus race): at the start the rival sits right
   behind-right of the player, so the chase camera is inside the rival's body (`docs/qa/versus-grid-clip.jpg`).
-- Wanted: grid the rival beside or ahead, or keep the chase camera out of other cars.
+- Found: the grid itself is clean (the original's two-car grid: side by side, 4.4 m apart, both behind the line;
+  chase, in-car and TV all clear, `docs/qa/versus-grid-chase.jpg`, `-cockpit.jpg`, `-tv.jpg`; the opponent golden tests
+  keep that grid). The clip is a rival driving right behind the player while the camera trails 13 m back: the
+  camera passes just over its roof, or through it when the rival sits higher (a crest, a ramp, a taller car).
+- Fix (`src/render/cameras.ts`): the chase camera rises (eased: fast up, slow down) to keep 2.2 m over any other
+  car's roof whose footprint it is over (or within 3 m of), the clearance it has over a car on the same level anyway;
+  a car the camera still ends up inside fades out (CarView.setFade) instead of showing its insides. Measured with the
+  rival drawn 2 m up, 22 → 4 m behind the player: nearest camera-to-body gap 0.28 m → 1.46 m
+  (`docs/qa/versus-behind-before.jpg` / `-after.jpg`).
 
 ### QA-09 · The ground was black when the ground textures were missing · QA · fixed
 - Repro (before): a checkout without `public/textures/`: terrain drawn with `groundMaterial` rendered black (the
@@ -128,6 +139,10 @@ for the orchestrator).
 - Repro (before): in-car the HUD said 80 MPH while the dashboard said 57 (`docs/qa/cockpit-two-speeds.jpg`). WORLD's
   merge made the cockpit dashboard replace the HUD speed. Still worth a look: `Dashboard.update` smoothing is a
   fixed fraction per frame (frame-rate dependent).
+- Re-checked (POLISH): the needles ease by `1 − e^(−26·dt)` now (the same at any frame rate). A car with its own
+  instruments (the muscle car, CS-FB-023) shows its own needles and a small digital speed + gear plate (bottom right)
+  fed from the same speed, so there is still one speed (`docs/qa/cockpit-needles.jpg`); the others keep the drawn
+  dashboard (`docs/qa/cockpit-drawn.jpg`).
 
 ## P3: polish
 
@@ -156,10 +171,31 @@ for the orchestrator).
 - SHIP's turn-your-phone card (and race pause) covers portrait on touch devices; the menus are landscape layouts
   (`docs/qa/portrait-menus.jpg` shows them in a narrow desktop window).
 
-### QA-21 · Shadow box snapped in world axes, not light space · WORLD
+### QA-21 · Shadow box snapped in world axes, not light space · POLISH · fixed
 - `applyAtmosphere().update` snaps the shadow target to texels along world x/y/z; the sun's shadow camera is
   rotated, so its texel grid isn't aligned with those steps and shadow edges can still crawl while driving. Snap in
   the light's view space.
+- Fix (`src/render/scenery.ts` snapToShadowTexels): the focus is snapped along the shadow camera's own x / y axes
+  (lookAt along −sunDir with world up), free along the light. `tests/shadow-snap.test.ts`: a still point keeps its
+  texel fraction to < 0.001 texel over a 10 s drive (world-axis snapping wandered > 0.2 texel). Frame-stepped capture
+  (Downtown Rush start, still camera, the shadow focus moving 0.23 m a frame): pixels changing per frame 0.074 % →
+  0.001 %.
+
+### QA-23 · In-car view judders through loops · POLISH · fixed
+- Repro: Lagoon Leap, in-car, the loop: the sim turns the car in uneven 20 Hz steps (pitch 5°, 2.6°, 1.5°, 0°, 1.8° …
+  per step) and straight interpolation shows each change of rate as a jolt (CINEMA lane).
+- Fix (`src/render/turn-ease.ts`, used by race-view.ts): the in-car camera's orientation is the mean of the car's over
+  the last two steps (a box filter, so the turn rate ramps between steps); the eye's position and the car itself are
+  not eased (no lag in where you are, the view trails the car by 50 ms like a head). smooth-check has an in-car loop
+  run (Lagoon Leap, car-super, from 1 s before the loop): turn change between frames 3.98° → 0.67° (limit 0.8°), turn
+  per frame 4.42° → 3.38° (limit 4°; a loop at that speed is ~3°/frame by itself). `tests/turn-ease.test.ts`.
+
+### QA-24 · Scenery cost the same triangles near and far · POLISH · fixed
+- Every prop copy was drawn at full detail at any distance (Downtown Rush 2.1 M triangles a frame, Glacier Pass 0.9 M).
+- Fix: levels of detail (CS-FB-025 `lods`; CS-FB-140 lighter twins where the generator's simplified levels are
+  broken), dealt out per copy by screen size (`src/render/instancing.ts` LodInstances, updateLods each frame).
+  Downtown Rush 2.12 M → 1.40 M, Glacier Pass 0.91 M → 0.53 M triangles a frame; 0.06–0.5 % of pixels differ in
+  before/after stills (`docs/qa/lod-forest-before.jpg` / `-after.jpg`).
 
 ### QA-22 · Taps shorter than one race step were lost · QA · fixed
 - Repro (before): the race read held keys once per 20 Hz step, so a key pressed and released within 50 ms between

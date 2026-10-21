@@ -338,7 +338,7 @@ export function applyAtmosphere(scene: THREE.Scene, sun: THREE.DirectionalLight,
     sunDir,
     update(camera, focus, shadowRadius = 45) {
       sky.position.copy(camera.position);
-      // The shadow box follows the focus, snapped to whole shadow-map texels so shadows don't shimmer.
+      // The shadow box follows the focus, snapped to whole shadow-map texels so shadow edges don't crawl.
       if (shadowRadius !== lastRadius) {
         const c = sun.shadow.camera;
         c.left = c.bottom = -shadowRadius;
@@ -348,14 +348,29 @@ export function applyAtmosphere(scene: THREE.Scene, sun: THREE.DirectionalLight,
         c.updateProjectionMatrix();
         lastRadius = shadowRadius;
       }
-      const texel = (2 * shadowRadius) / sun.shadow.mapSize.x;
-      const snap = (v: number) => Math.round(v / texel) * texel;
-      const f = new THREE.Vector3(snap(focus.x), snap(focus.y), snap(focus.z));
+      const f = snapToShadowTexels(focus, sunDir, (2 * shadowRadius) / sun.shadow.mapSize.x);
       sun.target.position.copy(f);
       sun.position.copy(f).addScaledVector(sunDir, 300);
       sun.target.updateMatrixWorld();
     },
   };
+}
+
+/**
+ * `focus` moved to the nearest point whose position across the sun's shadow camera is a whole number of shadow-map
+ * texels (`texel` metres). The shadow camera looks along −sunDir with world +Y as its up (three's lookAt), so its
+ * texel grid lies in that camera's own x/y axes, not the world's: snapping world x/y/z (as before, QA-21) still let
+ * the grid slide under the scene by part of a texel as the car drove, and shadow edges crawled. Along the light
+ * the focus is free (depth doesn't move texels).
+ */
+export function snapToShadowTexels(focus: THREE.Vector3, sunDir: THREE.Vector3, texel: number): THREE.Vector3 {
+  const z = sunDir.clone().normalize();
+  const x = new THREE.Vector3(0, 1, 0).cross(z);
+  if (x.lengthSq() < 1e-8) x.set(1, 0, 0);
+  x.normalize();
+  const y = z.clone().cross(x);
+  const snap = (v: number) => Math.round(v / texel) * texel;
+  return x.multiplyScalar(snap(focus.dot(x))).addScaledVector(y, snap(focus.dot(y))).addScaledVector(z, focus.dot(z));
 }
 
 /** Ground height (m) at a tile's middle (mean of its corners). */

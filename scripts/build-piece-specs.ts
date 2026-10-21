@@ -2,9 +2,9 @@
 // ssg.models.json (CS-FB-130): the loop (a 12-sided section whose lane drifts 400 units sideways) and the helix
 // corkscrews (a constant climb of 19 units per 15° sector) as custom paths, the bank entries (the original's twist
 // profile), the ramps (one grade, no eased ends) and the banked pieces (the road sheared, not turned: 240 units wide
-// seen from above, the low edge on the ground). The presets drew these as circles, eased climbs and turned decks, up
-// to 5 m off the simulated surface. Each entry's `trackpiece` is replaced; everything else in the file is left as it
-// is. `npm run assets` runs this after the terrain specs; scripts/piece-fit.ts measures the result against the
+// seen from above, the low edge on the ground), and the roll (a whole tube). The presets drew these as circles,
+// eased climbs, turned decks and a twisting road, up to 5 m off the simulated surface. Each entry's `trackpiece` is
+// replaced; everything else in the file is left as it is. `npm run assets` runs this after the terrain specs; scripts/piece-fit.ts measures the result against the
 // simulation.
 //   node_modules/.bin/vite-node scripts/build-piece-specs.ts [--check]
 import fs from 'node:fs';
@@ -122,6 +122,11 @@ const PIECES: Record<string, Record<string, unknown>> = {
   'tp-bank-entry-b': { path: bankEntryPath(1) },
   'tp-banked': { bank: BANK, width: bankWidth(BANK_RISE), path: [{ length: r4(CELL), bank: BANK }] },
   // Ramps: one constant grade, 450 over the tile (the simulation's ramp plane), kinked at its ends.
+  // The roll: the simulation's roll is the pipe's twelve faces, each drivable over a stretch of the piece that moves
+  // round from the right wall to the left (track-geometry.ts ROLL), so a car can take any line round the tube. A
+  // twisting road (the barrel-roll preset) left the wheels up to 2.7 m off it on most frames of a run; a whole tube
+  // has a deck wherever a face is.
+  'tp-corkscrew-roll': { footprint: [1, 2], path: [{ length: r4(2 * CELL), profile: { shape: 'pipe', radius: r4(117.4 * U) } }] },
   'tp-ramp': { preset: 'slope-up', height: r4(HILL_UNITS * U), transition: 0 },
   'tp-ramp-solid': { preset: 'slope-up', height: r4(HILL_UNITS * U), transition: 0, supports: 'solid' },
   'tp-banked-corner': { preset: 'banked-curve-left', size: 2, bank: BANK, bankIn: BANK, bankOut: BANK, width: bankWidth(BANK_RISE) },
