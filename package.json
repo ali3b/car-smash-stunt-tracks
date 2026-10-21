@@ -1,0 +1,29 @@
+{
+  "name": "car-smash-stunt-tracks",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Car Smash Stunt Tracks: a 3D stunt-track racer with a track editor",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "assets": "node scripts/build-assets.mjs",
+    "deploy": "node scripts/deploy-pages.mjs",
+    "test": "vitest run",
+    "tracks": "vite-node scripts/build-tracks.ts",
+    "terrain-specs": "vite-node scripts/build-terrain-specs.ts",
+    "tracks:drive": "vite-node scripts/tracks-drive.ts --"
+  },
+  "dependencies": {
+    "@fontsource/press-start-2p": "5.2.5",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.48.2",
+    "@types/three": "0.186.0",
+    "typescript": "5.6.3",
+    "vite": "5.4.11",
+    "vitest": "2.1.9"
+  }
+}

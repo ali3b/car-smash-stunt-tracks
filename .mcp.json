@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "synty-sprites": {
+      "type": "stdio",
+      "command": "/usr/bin/node",
+      "args": ["/home/andrew/projects/synty-sprite-generator/apps/cli/bin/ssg.mjs", "mcp"],
+      "env": { "SSG_ALLOWED_DIRS": "/home/andrew/projects/4dstunts" }
+    }
+  }
+}

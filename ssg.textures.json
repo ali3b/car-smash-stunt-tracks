@@ -1,0 +1,33 @@
+{
+  "comment": "Ground textures per scenery set: scripts/build-assets.mjs keeps public/textures/ in step with `ssg texture apply` (<name>.png, generated, git-ignored).",
+  "defaults": {
+    "size": 512,
+    "format": "png"
+  },
+  "textures": [
+    {
+      "name": "ground-sand",
+      "texture": "POLYGON_Pro_Racer_v3/SourceFiles/Textures/ProRacer/Ground/Beach_01.png"
+    },
+    {
+      "name": "ground-arid",
+      "texture": "POLYGON_NatureBiomes_AridDesert_v3/Textures/Dirt_Texture_Arid_01.png"
+    },
+    {
+      "name": "ground-grass",
+      "texture": "POLYGON_Palm_City_v3/SourceFiles/Textures/Terrain/Grass_01.png"
+    },
+    {
+      "name": "ground-grass-lush",
+      "texture": "POLYGON_Palm_City_v3/SourceFiles/Textures/Terrain/Grass_02.png"
+    },
+    {
+      "name": "ground-generic-grass",
+      "texture": "POLYGON_Generic_v3/Textures/Generic_Grass.png"
+    },
+    {
+      "name": "ground-snow",
+      "texture": "POLYGON_NatureBiomes_AlpineMountain_v3/Textures/Snow_01.png"
+    }
+  ]
+}
